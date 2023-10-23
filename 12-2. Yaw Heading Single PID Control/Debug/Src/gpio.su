@@ -1,0 +1,4 @@
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h:883:22:LL_GPIO_SetOutputPin	16	static
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h:912:22:LL_GPIO_ResetOutputPin	16	static
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h:411:22:LL_AHB1_GRP1_EnableClock	24	static
+../Src/gpio.c:40:6:MX_GPIO_Init	32	static
