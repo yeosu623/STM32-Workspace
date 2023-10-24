@@ -33,7 +33,7 @@ void iBus_Parsing(unsigned char* data, FSiA6B_iBus* iBus)
 
 #define _USE_FS_I6
 #ifdef _USE_FS_I6
-	iBus->FailSafe = (data[13] >> 4);
+	iBus->FailSafe = (data[11] >> 4);
 #endif
 
 #ifdef _USE_FS_I6X

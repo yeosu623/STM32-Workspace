@@ -1,0 +1,10 @@
+09:44:00 **** Build of configuration Debug for project 12-2. Yaw Heading Single PID Control ****
+make -j8 all 
+arm-none-eabi-size   12-2.\ Yaw\ Heading\ Single\ PID\ Control.elf 
+   text	   data	    bss	    dec	    hex	filename
+  67744	    488	   2760	  70992	  11550	12-2. Yaw Heading Single PID Control.elf
+Finished building: default.size.stdout
+ 
+
+09:44:00 Build Finished. 0 errors, 0 warnings. (took 328ms)
+

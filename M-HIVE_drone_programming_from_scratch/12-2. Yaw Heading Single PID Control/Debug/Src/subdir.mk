@@ -21,7 +21,6 @@ C_SRCS += \
 ../Src/spi.c \
 ../Src/stm32f4xx_hal_msp.c \
 ../Src/stm32f4xx_it.c \
-../Src/sys.c \
 ../Src/syscalls.c \
 ../Src/sysmem.c \
 ../Src/system_stm32f4xx.c \
@@ -45,7 +44,6 @@ OBJS += \
 ./Src/spi.o \
 ./Src/stm32f4xx_hal_msp.o \
 ./Src/stm32f4xx_it.o \
-./Src/sys.o \
 ./Src/syscalls.o \
 ./Src/sysmem.o \
 ./Src/system_stm32f4xx.o \
@@ -69,7 +67,6 @@ C_DEPS += \
 ./Src/spi.d \
 ./Src/stm32f4xx_hal_msp.d \
 ./Src/stm32f4xx_it.d \
-./Src/sys.d \
 ./Src/syscalls.d \
 ./Src/sysmem.d \
 ./Src/system_stm32f4xx.d \
@@ -86,7 +83,7 @@ Src/PID\ control.o: ../Src/PID\ control.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/AT24C08.d ./Src/AT24C08.o ./Src/AT24C08.su ./Src/BNO080.d ./Src/BNO080.o ./Src/BNO080.su ./Src/FS-iA6B.d ./Src/FS-iA6B.o ./Src/FS-iA6B.su ./Src/ICM20602.d ./Src/ICM20602.o ./Src/ICM20602.su ./Src/LPS22HH.d ./Src/LPS22HH.o ./Src/LPS22HH.su ./Src/M8N.d ./Src/M8N.o ./Src/M8N.su ./Src/PID\ control.d ./Src/PID\ control.o ./Src/PID\ control.su ./Src/Quaternion.d ./Src/Quaternion.o ./Src/Quaternion.su ./Src/adc.d ./Src/adc.o ./Src/adc.su ./Src/dma.d ./Src/dma.o ./Src/dma.su ./Src/gpio.d ./Src/gpio.o ./Src/gpio.su ./Src/i2c.d ./Src/i2c.o ./Src/i2c.su ./Src/main.d ./Src/main.o ./Src/main.su ./Src/spi.d ./Src/spi.o ./Src/spi.su ./Src/stm32f4xx_hal_msp.d ./Src/stm32f4xx_hal_msp.o ./Src/stm32f4xx_hal_msp.su ./Src/stm32f4xx_it.d ./Src/stm32f4xx_it.o ./Src/stm32f4xx_it.su ./Src/sys.d ./Src/sys.o ./Src/sys.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/system_stm32f4xx.d ./Src/system_stm32f4xx.o ./Src/system_stm32f4xx.su ./Src/tim.d ./Src/tim.o ./Src/tim.su ./Src/usart.d ./Src/usart.o ./Src/usart.su
+	-$(RM) ./Src/AT24C08.d ./Src/AT24C08.o ./Src/AT24C08.su ./Src/BNO080.d ./Src/BNO080.o ./Src/BNO080.su ./Src/FS-iA6B.d ./Src/FS-iA6B.o ./Src/FS-iA6B.su ./Src/ICM20602.d ./Src/ICM20602.o ./Src/ICM20602.su ./Src/LPS22HH.d ./Src/LPS22HH.o ./Src/LPS22HH.su ./Src/M8N.d ./Src/M8N.o ./Src/M8N.su ./Src/PID\ control.d ./Src/PID\ control.o ./Src/PID\ control.su ./Src/Quaternion.d ./Src/Quaternion.o ./Src/Quaternion.su ./Src/adc.d ./Src/adc.o ./Src/adc.su ./Src/dma.d ./Src/dma.o ./Src/dma.su ./Src/gpio.d ./Src/gpio.o ./Src/gpio.su ./Src/i2c.d ./Src/i2c.o ./Src/i2c.su ./Src/main.d ./Src/main.o ./Src/main.su ./Src/spi.d ./Src/spi.o ./Src/spi.su ./Src/stm32f4xx_hal_msp.d ./Src/stm32f4xx_hal_msp.o ./Src/stm32f4xx_hal_msp.su ./Src/stm32f4xx_it.d ./Src/stm32f4xx_it.o ./Src/stm32f4xx_it.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/system_stm32f4xx.d ./Src/system_stm32f4xx.o ./Src/system_stm32f4xx.su ./Src/tim.d ./Src/tim.o ./Src/tim.su ./Src/usart.d ./Src/usart.o ./Src/usart.su
 
 .PHONY: clean-Src
 

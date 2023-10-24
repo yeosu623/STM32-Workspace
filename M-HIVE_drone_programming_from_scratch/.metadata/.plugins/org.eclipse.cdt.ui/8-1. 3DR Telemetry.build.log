@@ -1,0 +1,10 @@
+08:13:52 **** Incremental Build of configuration Debug for project 8-1. 3DR Telemetry ****
+make -j8 all 
+arm-none-eabi-size   8-1.\ 3DR\ Telemetry.elf 
+   text	   data	    bss	    dec	    hex	filename
+  45856	    484	   2172	  48512	   bd80	8-1. 3DR Telemetry.elf
+Finished building: default.size.stdout
+ 
+
+08:13:53 Build Finished. 0 errors, 0 warnings. (took 376ms)
+

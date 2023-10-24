@@ -7,6 +7,8 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_drone_programming_from_scratch\1-2. Debug Buzzer"/>
+			<item value="C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_drone_programming_from_scratch\1-1. Debug LED"/>
 			<item value="C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\1-1. Debug LED"/>
 			<item value="C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\12-2. Yaw Heading Single PID Control"/>
 		</list>

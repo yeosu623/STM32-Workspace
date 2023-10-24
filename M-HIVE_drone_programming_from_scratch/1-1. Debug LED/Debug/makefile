@@ -60,8 +60,8 @@ all: main-build
 main-build: 1-1.\ Debug\ LED.elf secondary-outputs
 
 # Tool invocations
-1-1.\ Debug\ LED.elf 1-1.\ Debug\ LED.map: $(OBJS) $(USER_OBJS) C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\1-1.\ Debug\ LED\STM32F405RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "1-1. Debug LED.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\1-1. Debug LED\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. Debug LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+1-1.\ Debug\ LED.elf 1-1.\ Debug\ LED.map: $(OBJS) $(USER_OBJS) C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_drone_programming_from_scratch\1-1.\ Debug\ LED\STM32F405RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "1-1. Debug LED.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_drone_programming_from_scratch\1-1. Debug LED\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. Debug LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
