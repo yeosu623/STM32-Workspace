@@ -1,0 +1,10 @@
+02:25:28 **** Incremental Build of configuration Debug for project 11. Roll Pitch Double PID Control ****
+make -j8 all 
+arm-none-eabi-size   11.\ Roll\ Pitch\ Double\ PID\ Control.elf 
+   text	   data	    bss	    dec	    hex	filename
+  66592	    488	   2760	  69840	  110d0	11. Roll Pitch Double PID Control.elf
+Finished building: default.size.stdout
+ 
+
+02:25:29 Build Finished. 0 errors, 0 warnings. (took 297ms)
+

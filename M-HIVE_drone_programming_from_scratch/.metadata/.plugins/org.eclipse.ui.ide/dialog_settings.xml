@@ -7,6 +7,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_drone_programming_from_scratch\11. Roll Pitch Double PID Control"/>
 			<item value="C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_drone_programming_from_scratch\12-2. Yaw Heading Single PID Control"/>
 			<item value="C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_drone_programming_from_scratch\1-3. Debug UART"/>
 			<item value="C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_drone_programming_from_scratch\4-3. i-Bus Parsing"/>
