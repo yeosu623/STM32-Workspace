@@ -54,3 +54,33 @@ localhost:61234: Connection timed out.
 java.lang.Exception: localhost:61234: Connection timed out.
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SESSION 2024-03-14 00:48:44.794 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-03-14 00:48:55.022
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-03-14 00:48:55.120
+!MESSAGE Log4j initialized with config file C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-03-14 00:49:05.537
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-03-15 00:07:01.987 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-03-15 00:07:21.649
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-03-15 00:07:21.784
+!MESSAGE Log4j initialized with config file C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-03-15 00:07:35.170
+!MESSAGE Started RMI Server, listening on port 41337

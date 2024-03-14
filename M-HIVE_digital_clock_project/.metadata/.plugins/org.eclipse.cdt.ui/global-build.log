@@ -39,3 +39,761 @@ arm-none-eabi-size   1-1.\ LED\ toggle\ with\ button.elf
    6212	     20	   1572	   7804	   1e7c	1-1. LED toggle with button.elf
 Finished building: default.size.stdout
  
+00:51:46 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-size   1-1.\ LED\ toggle\ with\ button.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6212	     20	   1572	   7804	   1e7c	1-1. LED toggle with button.elf
+Finished building: default.size.stdout
+ 
+00:52:26 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1-1. LED toggle with button.elf
+ 
+arm-none-eabi-size   1-1.\ LED\ toggle\ with\ button.elf 
+arm-none-eabi-objdump -h -S  1-1.\ LED\ toggle\ with\ button.elf  > "1-1. LED toggle with button.list"
+   text	   data	    bss	    dec	    hex	filename
+   6180	     20	   1572	   7772	   1e5c	1-1. LED toggle with button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1-1. LED toggle with button.list
+ 
+01:10:10 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:102:7: warning: unused variable 'blue' [-Wunused-variable]
+  102 |   int blue = 0;
+      |       ^~~~
+../Core/Src/main.c:101:7: warning: unused variable 'green' [-Wunused-variable]
+  101 |   int green = 0;
+      |       ^~~~~
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1-1. LED toggle with button.elf
+ 
+arm-none-eabi-size   1-1.\ LED\ toggle\ with\ button.elf 
+arm-none-eabi-objdump -h -S  1-1.\ LED\ toggle\ with\ button.elf  > "1-1. LED toggle with button.list"
+   text	   data	    bss	    dec	    hex	filename
+   6332	     20	   1572	   7924	   1ef4	1-1. LED toggle with button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1-1. LED toggle with button.list
+ 
+00:10:41 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1-1. LED toggle with button.elf
+ 
+arm-none-eabi-size   1-1.\ LED\ toggle\ with\ button.elf 
+arm-none-eabi-objdump -h -S  1-1.\ LED\ toggle\ with\ button.elf  > "1-1. LED toggle with button.list"
+   text	   data	    bss	    dec	    hex	filename
+   6324	     20	   1572	   7916	   1eec	1-1. LED toggle with button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1-1. LED toggle with button.list
+ 
+00:11:51 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1-1. LED toggle with button.elf
+ 
+arm-none-eabi-size   1-1.\ LED\ toggle\ with\ button.elf 
+arm-none-eabi-objdump -h -S  1-1.\ LED\ toggle\ with\ button.elf  > "1-1. LED toggle with button.list"
+   text	   data	    bss	    dec	    hex	filename
+   6324	     20	   1572	   7916	   1eec	1-1. LED toggle with button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1-1. LED toggle with button.list
+ 
+00:13:48 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1-1. LED toggle with button.elf
+ 
+arm-none-eabi-size   1-1.\ LED\ toggle\ with\ button.elf 
+arm-none-eabi-objdump -h -S  1-1.\ LED\ toggle\ with\ button.elf  > "1-1. LED toggle with button.list"
+   text	   data	    bss	    dec	    hex	filename
+   6328	     20	   1572	   7920	   1ef0	1-1. LED toggle with button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1-1. LED toggle with button.list
+ 
+00:15:53 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1-1. LED toggle with button.elf
+ 
+arm-none-eabi-size   1-1.\ LED\ toggle\ with\ button.elf 
+arm-none-eabi-objdump -h -S  1-1.\ LED\ toggle\ with\ button.elf  > "1-1. LED toggle with button.list"
+   text	   data	    bss	    dec	    hex	filename
+   6328	     20	   1572	   7920	   1ef0	1-1. LED toggle with button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1-1. LED toggle with button.list
+ 
+00:23:01 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1-1. LED toggle with button.elf
+ 
+arm-none-eabi-size   1-1.\ LED\ toggle\ with\ button.elf 
+arm-none-eabi-objdump -h -S  1-1.\ LED\ toggle\ with\ button.elf  > "1-1. LED toggle with button.list"
+   text	   data	    bss	    dec	    hex	filename
+   6332	     20	   1572	   7924	   1ef4	1-1. LED toggle with button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1-1. LED toggle with button.list
+ 
+00:37:07 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1-1. LED toggle with button.elf
+ 
+arm-none-eabi-size   1-1.\ LED\ toggle\ with\ button.elf 
+arm-none-eabi-objdump -h -S  1-1.\ LED\ toggle\ with\ button.elf  > "1-1. LED toggle with button.list"
+   text	   data	    bss	    dec	    hex	filename
+   6364	     20	   1572	   7956	   1f14	1-1. LED toggle with button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1-1. LED toggle with button.list
+ 
+00:37:32 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1-1. LED toggle with button.elf
+ 
+arm-none-eabi-size   1-1.\ LED\ toggle\ with\ button.elf 
+arm-none-eabi-objdump -h -S  1-1.\ LED\ toggle\ with\ button.elf  > "1-1. LED toggle with button.list"
+   text	   data	    bss	    dec	    hex	filename
+   6364	     20	   1572	   7956	   1f14	1-1. LED toggle with button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1-1. LED toggle with button.list
+ 
+00:39:09 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:7: warning: unused variable 'SW1_released' [-Wunused-variable]
+  103 |   int SW1_released = TRUE;
+      |       ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1-1. LED toggle with button.elf
+ 
+arm-none-eabi-size   1-1.\ LED\ toggle\ with\ button.elf 
+arm-none-eabi-objdump -h -S  1-1.\ LED\ toggle\ with\ button.elf  > "1-1. LED toggle with button.list"
+   text	   data	    bss	    dec	    hex	filename
+   6356	     20	   1572	   7948	   1f0c	1-1. LED toggle with button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1-1. LED toggle with button.list
+ 
+00:54:37 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1-1. LED toggle with button.elf
+ 
+arm-none-eabi-size   1-1.\ LED\ toggle\ with\ button.elf 
+arm-none-eabi-objdump -h -S  1-1.\ LED\ toggle\ with\ button.elf  > "1-1. LED toggle with button.list"
+   text	   data	    bss	    dec	    hex	filename
+   6352	     20	   1572	   7944	   1f08	1-1. LED toggle with button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1-1. LED toggle with button.list
+ 
+01:02:49 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:57: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  103 | #define SW1_PRESSED HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:124:5: note: in expansion of macro 'SW1_PRESSED'
+  124 |  if(SW1_PRESSED == TRUE)
+      |     ^~~~~~~~~~~
+../Core/Src/main.c:103:57: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  103 | #define SW1_PRESSED HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:136:10: note: in expansion of macro 'SW1_PRESSED'
+  136 |  else if(SW1_PRESSED == FALSE)
+      |          ^~~~~~~~~~~
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1-1. LED toggle with button.elf
+ 
+arm-none-eabi-size   1-1.\ LED\ toggle\ with\ button.elf 
+arm-none-eabi-objdump -h -S  1-1.\ LED\ toggle\ with\ button.elf  > "1-1. LED toggle with button.list"
+   text	   data	    bss	    dec	    hex	filename
+   6352	     20	   1572	   7944	   1f08	1-1. LED toggle with button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1-1. LED toggle with button.list
+ 
+01:26:44 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:106:63: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  106 | #define IS_SW1_PRESSING() HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:143:5: note: in expansion of macro 'IS_SW1_PRESSING'
+  143 |  if(IS_SW1_PRESSING() == TRUE && SW1_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:106:63: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  106 | #define IS_SW1_PRESSING() HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:152:5: note: in expansion of macro 'IS_SW1_PRESSING'
+  152 |  if(IS_SW1_PRESSING() == FALSE && SW1_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:159:4: warning: implicit declaration of function 'RIHGT_LED_RED_RESET'; did you mean 'RIGHT_LED_RED_RESET'? [-Wimplicit-function-declaration]
+  159 |    RIHGT_LED_RED_RESET();
+      |    ^~~~~~~~~~~~~~~~~~~
+      |    RIGHT_LED_RED_RESET
+../Core/Src/main.c:107:64: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  107 | #define IS_SW2_PRESSING() HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:163:5: note: in expansion of macro 'IS_SW2_PRESSING'
+  163 |  if(IS_SW2_PRESSING() == TRUE && SW2_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:107:64: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  107 | #define IS_SW2_PRESSING() HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:172:5: note: in expansion of macro 'IS_SW2_PRESSING'
+  172 |  if(IS_SW2_PRESSING() == FALSE && SW2_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:179:4: warning: implicit declaration of function 'RIHGT_LED_GREEN_RESET'; did you mean 'RIGHT_LED_GREEN_RESET'? [-Wimplicit-function-declaration]
+  179 |    RIHGT_LED_GREEN_RESET();
+      |    ^~~~~~~~~~~~~~~~~~~~~
+      |    RIGHT_LED_GREEN_RESET
+../Core/Src/main.c:108:63: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  108 | #define IS_SW3_PRESSING() HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:183:5: note: in expansion of macro 'IS_SW3_PRESSING'
+  183 |  if(IS_SW3_PRESSING() == TRUE && SW3_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:108:63: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  108 | #define IS_SW3_PRESSING() HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:192:5: note: in expansion of macro 'IS_SW3_PRESSING'
+  192 |  if(IS_SW3_PRESSING() == FALSE && SW3_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:197:4: warning: implicit declaration of function 'RIGHT_LED_BLUE_SET'; did you mean 'RIHGT_LED_BLUE_SET'? [-Wimplicit-function-declaration]
+  197 |    RIGHT_LED_BLUE_SET();
+      |    ^~~~~~~~~~~~~~~~~~
+      |    RIHGT_LED_BLUE_SET
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `main':
+C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:159: undefined reference to `RIHGT_LED_RED_RESET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:179: undefined reference to `RIHGT_LED_GREEN_RESET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:197: undefined reference to `RIGHT_LED_BLUE_SET'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: 1-1. LED toggle with button.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+01:27:15 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:128:3: warning: implicit declaration of function 'RIHGT_LED_BLUE_SET'; did you mean 'RIGHT_LED_BLUE_SET'? [-Wimplicit-function-declaration]
+  128 |   RIHGT_LED_BLUE_SET();
+      |   ^~~~~~~~~~~~~~~~~~
+      |   RIGHT_LED_BLUE_SET
+../Core/Src/main.c:106:63: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  106 | #define IS_SW1_PRESSING() HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:143:5: note: in expansion of macro 'IS_SW1_PRESSING'
+  143 |  if(IS_SW1_PRESSING() == TRUE && SW1_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:106:63: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  106 | #define IS_SW1_PRESSING() HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:152:5: note: in expansion of macro 'IS_SW1_PRESSING'
+  152 |  if(IS_SW1_PRESSING() == FALSE && SW1_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:159:4: warning: implicit declaration of function 'RIHGT_LED_RED_RESET'; did you mean 'RIGHT_LED_RED_RESET'? [-Wimplicit-function-declaration]
+  159 |    RIHGT_LED_RED_RESET();
+      |    ^~~~~~~~~~~~~~~~~~~
+      |    RIGHT_LED_RED_RESET
+../Core/Src/main.c:107:64: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  107 | #define IS_SW2_PRESSING() HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:163:5: note: in expansion of macro 'IS_SW2_PRESSING'
+  163 |  if(IS_SW2_PRESSING() == TRUE && SW2_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:107:64: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  107 | #define IS_SW2_PRESSING() HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:172:5: note: in expansion of macro 'IS_SW2_PRESSING'
+  172 |  if(IS_SW2_PRESSING() == FALSE && SW2_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:179:4: warning: implicit declaration of function 'RIHGT_LED_GREEN_RESET'; did you mean 'RIGHT_LED_GREEN_RESET'? [-Wimplicit-function-declaration]
+  179 |    RIHGT_LED_GREEN_RESET();
+      |    ^~~~~~~~~~~~~~~~~~~~~
+      |    RIGHT_LED_GREEN_RESET
+../Core/Src/main.c:108:63: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  108 | #define IS_SW3_PRESSING() HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:183:5: note: in expansion of macro 'IS_SW3_PRESSING'
+  183 |  if(IS_SW3_PRESSING() == TRUE && SW3_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:108:63: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  108 | #define IS_SW3_PRESSING() HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:192:5: note: in expansion of macro 'IS_SW3_PRESSING'
+  192 |  if(IS_SW3_PRESSING() == FALSE && SW3_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:199:4: warning: implicit declaration of function 'RIHGT_LED_BLUE_RESET'; did you mean 'RIGHT_LED_BLUE_RESET'? [-Wimplicit-function-declaration]
+  199 |    RIHGT_LED_BLUE_RESET();
+      |    ^~~~~~~~~~~~~~~~~~~~
+      |    RIGHT_LED_BLUE_RESET
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `main':
+C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:128: undefined reference to `RIHGT_LED_BLUE_SET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:159: undefined reference to `RIHGT_LED_RED_RESET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:179: undefined reference to `RIHGT_LED_GREEN_RESET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:199: undefined reference to `RIHGT_LED_BLUE_RESET'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: 1-1. LED toggle with button.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+01:28:05 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:128:3: warning: implicit declaration of function 'RIHGT_LED_BLUE_SET'; did you mean 'RIGHT_LED_BLUE_SET'? [-Wimplicit-function-declaration]
+  128 |   RIHGT_LED_BLUE_SET();
+      |   ^~~~~~~~~~~~~~~~~~
+      |   RIGHT_LED_BLUE_SET
+../Core/Src/main.c:106:63: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  106 | #define IS_SW1_PRESSING() HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:143:5: note: in expansion of macro 'IS_SW1_PRESSING'
+  143 |  if(IS_SW1_PRESSING() == TRUE && SW1_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:106:63: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  106 | #define IS_SW1_PRESSING() HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:152:5: note: in expansion of macro 'IS_SW1_PRESSING'
+  152 |  if(IS_SW1_PRESSING() == FALSE && SW1_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:107:64: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  107 | #define IS_SW2_PRESSING() HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:163:5: note: in expansion of macro 'IS_SW2_PRESSING'
+  163 |  if(IS_SW2_PRESSING() == TRUE && SW2_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:107:64: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  107 | #define IS_SW2_PRESSING() HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:172:5: note: in expansion of macro 'IS_SW2_PRESSING'
+  172 |  if(IS_SW2_PRESSING() == FALSE && SW2_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:108:63: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  108 | #define IS_SW3_PRESSING() HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:183:5: note: in expansion of macro 'IS_SW3_PRESSING'
+  183 |  if(IS_SW3_PRESSING() == TRUE && SW3_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:108:63: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  108 | #define IS_SW3_PRESSING() HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:192:5: note: in expansion of macro 'IS_SW3_PRESSING'
+  192 |  if(IS_SW3_PRESSING() == FALSE && SW3_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `main':
+C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:128: undefined reference to `RIHGT_LED_BLUE_SET'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: 1-1. LED toggle with button.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+01:28:40 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:106:63: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  106 | #define IS_SW1_PRESSING() HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:143:5: note: in expansion of macro 'IS_SW1_PRESSING'
+  143 |  if(IS_SW1_PRESSING() == TRUE && SW1_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:106:63: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  106 | #define IS_SW1_PRESSING() HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:152:5: note: in expansion of macro 'IS_SW1_PRESSING'
+  152 |  if(IS_SW1_PRESSING() == FALSE && SW1_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:107:64: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  107 | #define IS_SW2_PRESSING() HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:163:5: note: in expansion of macro 'IS_SW2_PRESSING'
+  163 |  if(IS_SW2_PRESSING() == TRUE && SW2_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:107:64: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  107 | #define IS_SW2_PRESSING() HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:172:5: note: in expansion of macro 'IS_SW2_PRESSING'
+  172 |  if(IS_SW2_PRESSING() == FALSE && SW2_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:108:63: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  108 | #define IS_SW3_PRESSING() HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:183:5: note: in expansion of macro 'IS_SW3_PRESSING'
+  183 |  if(IS_SW3_PRESSING() == TRUE && SW3_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:108:63: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  108 | #define IS_SW3_PRESSING() HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:192:5: note: in expansion of macro 'IS_SW3_PRESSING'
+  192 |  if(IS_SW3_PRESSING() == FALSE && SW3_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1-1. LED toggle with button.elf
+ 
+arm-none-eabi-size   1-1.\ LED\ toggle\ with\ button.elf 
+arm-none-eabi-objdump -h -S  1-1.\ LED\ toggle\ with\ button.elf  > "1-1. LED toggle with button.list"
+   text	   data	    bss	    dec	    hex	filename
+   6708	     20	   1572	   8300	   206c	1-1. LED toggle with button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1-1. LED toggle with button.list
+ 
+01:30:59 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:106:63: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  106 | #define IS_SW1_PRESSING() HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:143:5: note: in expansion of macro 'IS_SW1_PRESSING'
+  143 |  if(IS_SW1_PRESSING() == TRUE && SW1_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:106:63: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  106 | #define IS_SW1_PRESSING() HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:152:5: note: in expansion of macro 'IS_SW1_PRESSING'
+  152 |  if(IS_SW1_PRESSING() == FALSE && SW1_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:107:64: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  107 | #define IS_SW2_PRESSING() HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:163:5: note: in expansion of macro 'IS_SW2_PRESSING'
+  163 |  if(IS_SW2_PRESSING() == TRUE && SW2_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:107:64: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  107 | #define IS_SW2_PRESSING() HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:172:5: note: in expansion of macro 'IS_SW2_PRESSING'
+  172 |  if(IS_SW2_PRESSING() == FALSE && SW2_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:108:63: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  108 | #define IS_SW3_PRESSING() HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:183:5: note: in expansion of macro 'IS_SW3_PRESSING'
+  183 |  if(IS_SW3_PRESSING() == TRUE && SW3_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:108:63: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  108 | #define IS_SW3_PRESSING() HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) == GPIO_PIN_SET
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:192:5: note: in expansion of macro 'IS_SW3_PRESSING'
+  192 |  if(IS_SW3_PRESSING() == FALSE && SW3_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1-1. LED toggle with button.elf
+ 
+arm-none-eabi-size   1-1.\ LED\ toggle\ with\ button.elf 
+arm-none-eabi-objdump -h -S  1-1.\ LED\ toggle\ with\ button.elf  > "1-1. LED toggle with button.list"
+   text	   data	    bss	    dec	    hex	filename
+   6708	     20	   1572	   8300	   206c	1-1. LED toggle with button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1-1. LED toggle with button.list
+ 
+01:37:54 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:25:
+../Core/Src/main.c: In function 'main':
+../Core/Inc/easyMacros.h:27:66: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   27 | #define IS_SW1_PRESSING()    HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:111:5: note: in expansion of macro 'IS_SW1_PRESSING'
+  111 |  if(IS_SW1_PRESSING() == TRUE && SW1_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Inc/easyMacros.h:27:66: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   27 | #define IS_SW1_PRESSING()    HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:120:5: note: in expansion of macro 'IS_SW1_PRESSING'
+  120 |  if(IS_SW1_PRESSING() == FALSE && SW1_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Inc/easyMacros.h:28:67: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   28 | #define IS_SW2_PRESSING()    HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:131:5: note: in expansion of macro 'IS_SW2_PRESSING'
+  131 |  if(IS_SW2_PRESSING() == TRUE && SW2_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Inc/easyMacros.h:28:67: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   28 | #define IS_SW2_PRESSING()    HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:140:5: note: in expansion of macro 'IS_SW2_PRESSING'
+  140 |  if(IS_SW2_PRESSING() == FALSE && SW2_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Inc/easyMacros.h:29:66: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   29 | #define IS_SW3_PRESSING()    HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:151:5: note: in expansion of macro 'IS_SW3_PRESSING'
+  151 |  if(IS_SW3_PRESSING() == TRUE && SW3_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Inc/easyMacros.h:29:66: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   29 | #define IS_SW3_PRESSING()    HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:160:5: note: in expansion of macro 'IS_SW3_PRESSING'
+  160 |  if(IS_SW3_PRESSING() == FALSE && SW3_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1-1. LED toggle with button.elf
+ 
+arm-none-eabi-size   1-1.\ LED\ toggle\ with\ button.elf 
+arm-none-eabi-objdump -h -S  1-1.\ LED\ toggle\ with\ button.elf  > "1-1. LED toggle with button.list"
+   text	   data	    bss	    dec	    hex	filename
+   6708	     20	   1572	   8300	   206c	1-1. LED toggle with button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1-1. LED toggle with button.list
+ 
+01:38:12 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:91:3: warning: implicit declaration of function 'LEFT_LED_RED_SET' [-Wimplicit-function-declaration]
+   91 |   LEFT_LED_RED_SET();
+      |   ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:92:3: warning: implicit declaration of function 'LEFT_LED_GREEN_SET' [-Wimplicit-function-declaration]
+   92 |   LEFT_LED_GREEN_SET();
+      |   ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:93:3: warning: implicit declaration of function 'LEFT_LED_BLUE_SET' [-Wimplicit-function-declaration]
+   93 |   LEFT_LED_BLUE_SET();
+      |   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:3: warning: implicit declaration of function 'RIGHT_LED_RED_SET' [-Wimplicit-function-declaration]
+   94 |   RIGHT_LED_RED_SET();
+      |   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:95:3: warning: implicit declaration of function 'RIGHT_LED_GREEN_SET' [-Wimplicit-function-declaration]
+   95 |   RIGHT_LED_GREEN_SET();
+      |   ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:96:3: warning: implicit declaration of function 'RIGHT_LED_BLUE_SET' [-Wimplicit-function-declaration]
+   96 |   RIGHT_LED_BLUE_SET();
+      |   ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:111:5: warning: implicit declaration of function 'IS_SW1_PRESSING' [-Wimplicit-function-declaration]
+  111 |  if(IS_SW1_PRESSING() == TRUE && SW1_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:115:6: warning: implicit declaration of function 'IS_LEFT_LED_RED_RESET' [-Wimplicit-function-declaration]
+  115 |   if(IS_LEFT_LED_RED_RESET())
+      |      ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:117:11: warning: implicit declaration of function 'IS_LEFT_LED_RED_SET' [-Wimplicit-function-declaration]
+  117 |   else if(IS_LEFT_LED_RED_SET())
+      |           ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:118:4: warning: implicit declaration of function 'LEFT_LED_RED_RESET' [-Wimplicit-function-declaration]
+  118 |    LEFT_LED_RED_RESET();
+      |    ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:124:6: warning: implicit declaration of function 'IS_RIGHT_LED_RED_RESET' [-Wimplicit-function-declaration]
+  124 |   if(IS_RIGHT_LED_RED_RESET())
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:126:11: warning: implicit declaration of function 'IS_RIGHT_LED_RED_SET' [-Wimplicit-function-declaration]
+  126 |   else if(IS_RIGHT_LED_RED_SET())
+      |           ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:127:4: warning: implicit declaration of function 'RIGHT_LED_RED_RESET' [-Wimplicit-function-declaration]
+  127 |    RIGHT_LED_RED_RESET();
+      |    ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:131:5: warning: implicit declaration of function 'IS_SW2_PRESSING' [-Wimplicit-function-declaration]
+  131 |  if(IS_SW2_PRESSING() == TRUE && SW2_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:135:6: warning: implicit declaration of function 'IS_LEFT_LED_GREEN_RESET' [-Wimplicit-function-declaration]
+  135 |   if(IS_LEFT_LED_GREEN_RESET())
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:137:11: warning: implicit declaration of function 'IS_LEFT_LED_GREEN_SET' [-Wimplicit-function-declaration]
+  137 |   else if(IS_LEFT_LED_GREEN_SET())
+      |           ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:138:4: warning: implicit declaration of function 'LEFT_LED_GREEN_RESET' [-Wimplicit-function-declaration]
+  138 |    LEFT_LED_GREEN_RESET();
+      |    ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:144:6: warning: implicit declaration of function 'IS_RIGHT_LED_GREEN_RESET' [-Wimplicit-function-declaration]
+  144 |   if(IS_RIGHT_LED_GREEN_RESET())
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:146:11: warning: implicit declaration of function 'IS_RIGHT_LED_GREEN_SET' [-Wimplicit-function-declaration]
+  146 |   else if(IS_RIGHT_LED_GREEN_SET())
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:147:4: warning: implicit declaration of function 'RIGHT_LED_GREEN_RESET' [-Wimplicit-function-declaration]
+  147 |    RIGHT_LED_GREEN_RESET();
+      |    ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:151:5: warning: implicit declaration of function 'IS_SW3_PRESSING' [-Wimplicit-function-declaration]
+  151 |  if(IS_SW3_PRESSING() == TRUE && SW3_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:155:6: warning: implicit declaration of function 'IS_LEFT_LED_BLUE_RESET' [-Wimplicit-function-declaration]
+  155 |   if(IS_LEFT_LED_BLUE_RESET())
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:157:11: warning: implicit declaration of function 'IS_LEFT_LED_BLUE_SET' [-Wimplicit-function-declaration]
+  157 |   else if(IS_LEFT_LED_BLUE_SET())
+      |           ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:158:4: warning: implicit declaration of function 'LEFT_LED_BLUE_RESET' [-Wimplicit-function-declaration]
+  158 |    LEFT_LED_BLUE_RESET();
+      |    ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:164:6: warning: implicit declaration of function 'IS_RIGHT_LED_BLUE_RESET' [-Wimplicit-function-declaration]
+  164 |   if(IS_RIGHT_LED_BLUE_RESET())
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:166:11: warning: implicit declaration of function 'IS_RIGHT_LED_BLUE_SET' [-Wimplicit-function-declaration]
+  166 |   else if(IS_RIGHT_LED_BLUE_SET())
+      |           ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:167:4: warning: implicit declaration of function 'RIGHT_LED_BLUE_RESET' [-Wimplicit-function-declaration]
+  167 |    RIGHT_LED_BLUE_RESET();
+      |    ^~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `main':
+C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:91: undefined reference to `LEFT_LED_RED_SET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:92: undefined reference to `LEFT_LED_GREEN_SET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:93: undefined reference to `LEFT_LED_BLUE_SET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:94: undefined reference to `RIGHT_LED_RED_SET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:95: undefined reference to `RIGHT_LED_GREEN_SET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:96: undefined reference to `RIGHT_LED_BLUE_SET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:111: undefined reference to `IS_SW1_PRESSING'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:115: undefined reference to `IS_LEFT_LED_RED_RESET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:116: undefined reference to `LEFT_LED_RED_SET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:117: undefined reference to `IS_LEFT_LED_RED_SET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:118: undefined reference to `LEFT_LED_RED_RESET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:120: undefined reference to `IS_SW1_PRESSING'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:124: undefined reference to `IS_RIGHT_LED_RED_RESET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:125: undefined reference to `RIGHT_LED_RED_SET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:126: undefined reference to `IS_RIGHT_LED_RED_SET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:127: undefined reference to `RIGHT_LED_RED_RESET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:131: undefined reference to `IS_SW2_PRESSING'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:135: undefined reference to `IS_LEFT_LED_GREEN_RESET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:136: undefined reference to `LEFT_LED_GREEN_SET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:137: undefined reference to `IS_LEFT_LED_GREEN_SET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:138: undefined reference to `LEFT_LED_GREEN_RESET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:140: undefined reference to `IS_SW2_PRESSING'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:144: undefined reference to `IS_RIGHT_LED_GREEN_RESET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:145: undefined reference to `RIGHT_LED_GREEN_SET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:146: undefined reference to `IS_RIGHT_LED_GREEN_SET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:147: undefined reference to `RIGHT_LED_GREEN_RESET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:151: undefined reference to `IS_SW3_PRESSING'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:155: undefined reference to `IS_LEFT_LED_BLUE_RESET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:156: undefined reference to `LEFT_LED_BLUE_SET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:157: undefined reference to `IS_LEFT_LED_BLUE_SET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:158: undefined reference to `LEFT_LED_BLUE_RESET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:160: undefined reference to `IS_SW3_PRESSING'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:164: undefined reference to `IS_RIGHT_LED_BLUE_RESET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:165: undefined reference to `RIGHT_LED_BLUE_SET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:166: undefined reference to `IS_RIGHT_LED_BLUE_SET'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/yeosu/STM32CubeIDE/workspace_1.10.1/M-HIVE_digital_clock_project/1-1. LED toggle with button/Debug/../Core/Src/main.c:167: undefined reference to `RIGHT_LED_BLUE_RESET'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: 1-1. LED toggle with button.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+01:38:51 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:25:
+../Core/Src/main.c: In function 'main':
+../Core/Inc/easyMacros.h:27:66: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   27 | #define IS_SW1_PRESSING()    HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:109:5: note: in expansion of macro 'IS_SW1_PRESSING'
+  109 |  if(IS_SW1_PRESSING() == TRUE && SW1_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Inc/easyMacros.h:27:66: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   27 | #define IS_SW1_PRESSING()    HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:118:5: note: in expansion of macro 'IS_SW1_PRESSING'
+  118 |  if(IS_SW1_PRESSING() == FALSE && SW1_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Inc/easyMacros.h:28:67: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   28 | #define IS_SW2_PRESSING()    HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:129:5: note: in expansion of macro 'IS_SW2_PRESSING'
+  129 |  if(IS_SW2_PRESSING() == TRUE && SW2_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Inc/easyMacros.h:28:67: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   28 | #define IS_SW2_PRESSING()    HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:138:5: note: in expansion of macro 'IS_SW2_PRESSING'
+  138 |  if(IS_SW2_PRESSING() == FALSE && SW2_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Inc/easyMacros.h:29:66: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   29 | #define IS_SW3_PRESSING()    HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:149:5: note: in expansion of macro 'IS_SW3_PRESSING'
+  149 |  if(IS_SW3_PRESSING() == TRUE && SW3_pressed == FALSE)
+      |     ^~~~~~~~~~~~~~~
+../Core/Inc/easyMacros.h:29:66: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   29 | #define IS_SW3_PRESSING()    HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:158:5: note: in expansion of macro 'IS_SW3_PRESSING'
+  158 |  if(IS_SW3_PRESSING() == FALSE && SW3_pressed == TRUE)
+      |     ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1-1. LED toggle with button.elf
+ 
+arm-none-eabi-size   1-1.\ LED\ toggle\ with\ button.elf 
+arm-none-eabi-objdump -h -S  1-1.\ LED\ toggle\ with\ button.elf  > "1-1. LED toggle with button.list"
+   text	   data	    bss	    dec	    hex	filename
+   6732	     20	   1580	   8332	   208c	1-1. LED toggle with button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1-1. LED toggle with button.list
+ 
+01:48:32 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:25:
+../Core/Src/main.c: In function 'main':
+../Core/Inc/easyMacros.h:27:66: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   27 | #define IS_SW1_PRESSING()    HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:110:29: note: in expansion of macro 'IS_SW1_PRESSING'
+  110 |  if(SW1_pressed == FALSE && IS_SW1_PRESSING() == TRUE) // SW1?„ ?ˆ„ë¥´ê³  ?žˆì§? ?•Š?‹¤ê°? ?ˆ„ë¥´ê¸° ?‹œ?ž‘?•˜?Š” ê·? ?‹œ? ë¶??„°
+      |                             ^~~~~~~~~~~~~~~
+../Core/Inc/easyMacros.h:27:66: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   27 | #define IS_SW1_PRESSING()    HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:117:28: note: in expansion of macro 'IS_SW1_PRESSING'
+  117 |  if(SW1_pressed == TRUE && IS_SW1_PRESSING() == FALSE) // SW1?„ ?ˆ„ë¥´ê³  ?žˆ?‹¤ê°? ?•Œê¸? ?‹œ?ž‘?•˜?Š” ê·? ?‹œ? ë¶??„°
+      |                            ^~~~~~~~~~~~~~~
+../Core/Inc/easyMacros.h:28:67: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   28 | #define IS_SW2_PRESSING()    HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:127:29: note: in expansion of macro 'IS_SW2_PRESSING'
+  127 |  if(SW2_pressed == FALSE && IS_SW2_PRESSING() == TRUE)
+      |                             ^~~~~~~~~~~~~~~
+../Core/Inc/easyMacros.h:28:67: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   28 | #define IS_SW2_PRESSING()    HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:134:28: note: in expansion of macro 'IS_SW2_PRESSING'
+  134 |  if(SW2_pressed == TRUE && IS_SW2_PRESSING() == FALSE)
+      |                            ^~~~~~~~~~~~~~~
+../Core/Inc/easyMacros.h:29:66: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   29 | #define IS_SW3_PRESSING()    HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:144:29: note: in expansion of macro 'IS_SW3_PRESSING'
+  144 |  if(SW3_pressed == FALSE && IS_SW3_PRESSING() == TRUE)
+      |                             ^~~~~~~~~~~~~~~
+../Core/Inc/easyMacros.h:29:66: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   29 | #define IS_SW3_PRESSING()    HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:151:28: note: in expansion of macro 'IS_SW3_PRESSING'
+  151 |  if(SW3_pressed == TRUE && IS_SW3_PRESSING() == FALSE)
+      |                            ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1-1. LED toggle with button.elf
+ 
+arm-none-eabi-size   1-1.\ LED\ toggle\ with\ button.elf 
+arm-none-eabi-objdump -h -S  1-1.\ LED\ toggle\ with\ button.elf  > "1-1. LED toggle with button.list"
+   text	   data	    bss	    dec	    hex	filename
+   6732	     20	   1580	   8332	   208c	1-1. LED toggle with button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1-1. LED toggle with button.list
+ 

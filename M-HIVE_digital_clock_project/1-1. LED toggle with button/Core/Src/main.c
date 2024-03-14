@@ -22,7 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "easyMacros.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -32,6 +32,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define TRUE 1
+#define FALSE 0
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -40,9 +42,10 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-
 /* USER CODE BEGIN PV */
-
+int SW1_pressed = FALSE;
+int SW2_pressed = FALSE;
+int SW3_pressed = FALSE;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -84,11 +87,14 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  /* USER CODE BEGIN 2 */
-  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_SET);
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_SET);
 
+  /* USER CODE BEGIN 2 */
+  LEFT_LED_RED_SET();
+  LEFT_LED_GREEN_SET();
+  LEFT_LED_BLUE_SET();
+  RIGHT_LED_RED_SET();
+  RIGHT_LED_GREEN_SET();
+  RIGHT_LED_BLUE_SET();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -98,10 +104,57 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	if(HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET)
-		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_RESET);
-	else
-		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_SET);
+
+	// LED - RED
+	// 빨강색 LED, 초록색 LED, 파랑색 LED 전부 동작원리가 같다.
+	if(SW1_pressed == FALSE && IS_SW1_PRESSING() == TRUE) // SW1을 누르고 있지 않다가 누르기 시작하는 그 시점부터
+	{
+		SW1_pressed = TRUE; // SW1을 누르고 있는 상태라고 인식한다.
+
+		if(IS_LEFT_LED_RED_RESET()) LEFT_LED_RED_SET(); // 만약 왼쪽 빨강색 LED가 꺼져있으면 켜주고,
+		else if(IS_LEFT_LED_RED_SET()) LEFT_LED_RED_RESET(); // 켜져있으면 꺼준다.
+	}
+	if(SW1_pressed == TRUE && IS_SW1_PRESSING() == FALSE) // SW1을 누르고 있다가 때기 시작하는 그 시점부터
+	{
+		SW1_pressed = FALSE; // SW1을 때고 있는 상태라고 인식한다.
+
+		if(IS_RIGHT_LED_RED_RESET()) RIGHT_LED_RED_SET(); // 만약 오른쪽 빨강색 LED가 꺼져있으면 켜주고,
+		else if(IS_RIGHT_LED_RED_SET())	RIGHT_LED_RED_RESET(); // 켜저있으면 꺼준다.
+	}
+
+
+	// LED - GREEN
+	if(SW2_pressed == FALSE && IS_SW2_PRESSING() == TRUE)
+	{
+		SW2_pressed = TRUE;
+
+		if(IS_LEFT_LED_GREEN_RESET()) LEFT_LED_GREEN_SET();
+		else if(IS_LEFT_LED_GREEN_SET()) LEFT_LED_GREEN_RESET();
+	}
+	if(SW2_pressed == TRUE && IS_SW2_PRESSING() == FALSE)
+	{
+		SW2_pressed = FALSE;
+
+		if(IS_RIGHT_LED_GREEN_RESET()) RIGHT_LED_GREEN_SET();
+		else if(IS_RIGHT_LED_GREEN_SET()) RIGHT_LED_GREEN_RESET();
+	}
+
+
+	// LED - BLUE
+	if(SW3_pressed == FALSE && IS_SW3_PRESSING() == TRUE)
+	{
+		SW3_pressed = TRUE;
+
+		if(IS_LEFT_LED_BLUE_RESET()) LEFT_LED_BLUE_SET();
+		else if(IS_LEFT_LED_BLUE_SET()) LEFT_LED_BLUE_RESET();
+	}
+	if(SW3_pressed == TRUE && IS_SW3_PRESSING() == FALSE)
+	{
+		SW3_pressed = FALSE;
+
+		if(IS_RIGHT_LED_BLUE_RESET()) RIGHT_LED_BLUE_SET();
+		else if(IS_RIGHT_LED_BLUE_SET()) RIGHT_LED_BLUE_RESET();
+	}
   }
   /* USER CODE END 3 */
 }

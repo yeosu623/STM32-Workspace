@@ -1,10 +1,55 @@
-00:41:23 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
+01:48:32 **** Incremental Build of configuration Debug for project 1-1. LED toggle with button ****
 make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:25:
+../Core/Src/main.c: In function 'main':
+../Core/Inc/easyMacros.h:27:66: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   27 | #define IS_SW1_PRESSING()    HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:110:29: note: in expansion of macro 'IS_SW1_PRESSING'
+  110 |  if(SW1_pressed == FALSE && IS_SW1_PRESSING() == TRUE) // SW1?„ ?ˆ„ë¥´ê³  ?žˆì§? ?•Š?‹¤ê°? ?ˆ„ë¥´ê¸° ?‹œ?ž‘?•˜?Š” ê·? ?‹œ? ë¶??„°
+      |                             ^~~~~~~~~~~~~~~
+../Core/Inc/easyMacros.h:27:66: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   27 | #define IS_SW1_PRESSING()    HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:117:28: note: in expansion of macro 'IS_SW1_PRESSING'
+  117 |  if(SW1_pressed == TRUE && IS_SW1_PRESSING() == FALSE) // SW1?„ ?ˆ„ë¥´ê³  ?žˆ?‹¤ê°? ?•Œê¸? ?‹œ?ž‘?•˜?Š” ê·? ?‹œ? ë¶??„°
+      |                            ^~~~~~~~~~~~~~~
+../Core/Inc/easyMacros.h:28:67: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   28 | #define IS_SW2_PRESSING()    HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:127:29: note: in expansion of macro 'IS_SW2_PRESSING'
+  127 |  if(SW2_pressed == FALSE && IS_SW2_PRESSING() == TRUE)
+      |                             ^~~~~~~~~~~~~~~
+../Core/Inc/easyMacros.h:28:67: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   28 | #define IS_SW2_PRESSING()    HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:134:28: note: in expansion of macro 'IS_SW2_PRESSING'
+  134 |  if(SW2_pressed == TRUE && IS_SW2_PRESSING() == FALSE)
+      |                            ^~~~~~~~~~~~~~~
+../Core/Inc/easyMacros.h:29:66: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   29 | #define IS_SW3_PRESSING()    HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:144:29: note: in expansion of macro 'IS_SW3_PRESSING'
+  144 |  if(SW3_pressed == FALSE && IS_SW3_PRESSING() == TRUE)
+      |                             ^~~~~~~~~~~~~~~
+../Core/Inc/easyMacros.h:29:66: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+   29 | #define IS_SW3_PRESSING()    HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) == GPIO_PIN_SET
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+../Core/Src/main.c:151:28: note: in expansion of macro 'IS_SW3_PRESSING'
+  151 |  if(SW3_pressed == TRUE && IS_SW3_PRESSING() == FALSE)
+      |                            ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "1-1. LED toggle with button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-1. LED toggle with button\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-1. LED toggle with button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1-1. LED toggle with button.elf
+ 
 arm-none-eabi-size   1-1.\ LED\ toggle\ with\ button.elf 
+arm-none-eabi-objdump -h -S  1-1.\ LED\ toggle\ with\ button.elf  > "1-1. LED toggle with button.list"
    text	   data	    bss	    dec	    hex	filename
-   6212	     20	   1572	   7804	   1e7c	1-1. LED toggle with button.elf
+   6732	     20	   1580	   8332	   208c	1-1. LED toggle with button.elf
 Finished building: default.size.stdout
  
+Finished building: 1-1. LED toggle with button.list
+ 
 
-00:41:23 Build Finished. 0 errors, 0 warnings. (took 181ms)
+01:48:32 Build Finished. 0 errors, 6 warnings. (took 585ms)
 
