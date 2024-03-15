@@ -1,7 +1,8 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-1. LED toggle with button Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-2. LED toggle with button and UART transmission Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-1.\ LED\ toggle\ with\ button\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-1.\ LED\ toggle\ with\ button\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-2.\ LED\ toggle\ with\ button\ and\ UART\ transmission\ Debug/activeLaunchMode=run
