@@ -35,8 +35,6 @@
 /* USER CODE BEGIN PD */
 #define TRUE 1
 #define FALSE 0
-#define LEFT 0
-#define RIGHT 1
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -51,8 +49,9 @@ int SW1_pressed = FALSE;
 int SW2_pressed = FALSE;
 int SW3_pressed = FALSE;
 int SW4_pressed = FALSE;
-int LED_target = LEFT;
+int select_left_LED = TRUE;
 uint8_t uart3_rx_data = 0;
+uint8_t uart3_rx_flag = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -100,13 +99,14 @@ int main(void)
   /* Initialize interrupts */
   MX_NVIC_Init();
   /* USER CODE BEGIN 2 */
-  LEFT_LED_RED_SET();
-  LEFT_LED_GREEN_SET();
-  LEFT_LED_BLUE_SET();
-  RIGHT_LED_RED_SET();
-  RIGHT_LED_GREEN_SET();
-  RIGHT_LED_BLUE_SET();
   HAL_UART_Receive_IT(&huart3, &uart3_rx_data, sizeof(uart3_rx_data));
+
+  L_RED_LED_OFF();
+  L_GREEN_LED_OFF();
+  L_BLUE_LED_OFF();
+  R_RED_LED_OFF();
+  R_GREEN_LED_OFF();
+  R_BLUE_LED_OFF();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -117,89 +117,70 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-	// LED - RED
-	// RED, GREEN, BLUE LED 전부 동일한 논리 흐름을 갖는다.
-	if(uart3_rx_data == '1' || (SW1_pressed == FALSE && IS_SW1_PRESSING() == TRUE)) // uart3에서 '1'을 받거나, SW1을 누르는 순간
+    /*
+     * BUTTON 방식
+     * red, green, blue LED 전부 같은 방식으로 동작한다.
+     */
+	if(SW1_pressed != CHECK_SW1_PRESSING()) // Rising Edge, Falling Edge를 검출
 	{
-		if(uart3_rx_data == '1') uart3_rx_data = 0; // uart3의 경우, 받아온 데이터를 없애고
-		else SW1_pressed = TRUE; // SW1의 경우, 눌렀다는 표시를 해준다.
-
-		if(LED_target == LEFT) // 만약 선택된 LED가 왼쪽이라면
+		SW1_pressed = !SW1_pressed; // 버튼의 현재 상태 검출
+		if(SW1_pressed) // 버튼이 눌러져있는 것으로 Rising Edge만 검출
 		{
-			if(IS_LEFT_LED_RED_RESET()) LEFT_LED_RED_SET(); // LED가 꺼져있으면 켜주고,
-			else if(IS_LEFT_LED_RED_SET()) LEFT_LED_RED_RESET(); // LED가 켜져있으면 꺼준다.
-		}
-		else if(LED_target == RIGHT) // 만약 선택된 LED가 오른쪽이라면
-		{
-			if(IS_RIGHT_LED_RED_RESET()) RIGHT_LED_RED_SET(); // LED가 꺼져있으면 켜주고,
-			else if(IS_RIGHT_LED_RED_SET()) RIGHT_LED_RED_RESET(); // LED가 켜져있으면 꺼준다.
+			if(select_left_LED) L_RED_LED_TOGGLE(); // 왼쪽 LED가 선택되어 있으면 왼쪽 LED를 토글
+			else R_RED_LED_TOGGLE(); // 반대의 경우 오른쪽 LED를 토글
 		}
 	}
-	if(SW1_pressed == TRUE && IS_SW1_PRESSING() == FALSE) // SW1를 때게 되면
+
+	if(SW2_pressed != CHECK_SW2_PRESSING())
 	{
-		SW1_pressed = FALSE; // 땟다는 표시를 해준다.
-	}
-
-
-	// LED - GREEN
-	if(uart3_rx_data == '2' || (SW2_pressed == FALSE && IS_SW2_PRESSING() == TRUE))
-	{
-		if(uart3_rx_data == '2') uart3_rx_data = 0;
-		else SW2_pressed = TRUE;
-
-		if(LED_target == LEFT)
+		SW2_pressed = !SW2_pressed;
+		if(SW2_pressed)
 		{
-			if(IS_LEFT_LED_GREEN_RESET()) LEFT_LED_GREEN_SET();
-			else if(IS_LEFT_LED_GREEN_SET()) LEFT_LED_GREEN_RESET();
-		}
-		else if(LED_target == RIGHT)
-		{
-			if(IS_RIGHT_LED_GREEN_RESET()) RIGHT_LED_GREEN_SET();
-			else if(IS_RIGHT_LED_GREEN_SET()) RIGHT_LED_GREEN_RESET();
+			if(select_left_LED) L_GREEN_LED_TOGGLE();
+			else R_GREEN_LED_TOGGLE();
 		}
 	}
-	if(SW2_pressed == TRUE && IS_SW2_PRESSING() == FALSE)
+
+	if(SW3_pressed != CHECK_SW3_PRESSING())
 	{
-		SW2_pressed = FALSE;
-	}
-
-
-	// LED - BLUE
-	if(uart3_rx_data == '3' || (SW3_pressed == FALSE && IS_SW3_PRESSING() == TRUE))
-	{
-		if(uart3_rx_data == '3') uart3_rx_data = 0;
-		else SW3_pressed = TRUE;
-
-		if(LED_target == LEFT)
+		SW3_pressed = !SW3_pressed;
+		if(SW3_pressed)
 		{
-			if(IS_LEFT_LED_BLUE_RESET()) LEFT_LED_BLUE_SET();
-			else if(IS_LEFT_LED_BLUE_SET()) LEFT_LED_BLUE_RESET();
-		}
-		else if(LED_target == RIGHT)
-		{
-			if(IS_RIGHT_LED_BLUE_RESET()) RIGHT_LED_BLUE_SET();
-			else if(IS_RIGHT_LED_BLUE_SET()) RIGHT_LED_BLUE_RESET();
+			if(select_left_LED) L_BLUE_LED_TOGGLE();
+			else R_BLUE_LED_TOGGLE();
 		}
 	}
-	if(SW3_pressed == TRUE && IS_SW3_PRESSING() == FALSE)
+
+	if(SW4_pressed != CHECK_SW4_PRESSING()) // Rising Edge, Falling Edge 검출
 	{
-		SW3_pressed = FALSE;
+		SW4_pressed = !SW4_pressed; // 버튼의 현재 상태 검출
+		if(SW4_pressed) select_left_LED = !select_left_LED; // 버튼의 현재 상태로 Rising Edge만 검출. LED 선택 방태를 바꾼다.
 	}
 
 
-	// LED target select
-	// LED 코드와 논리적 흐름은 동일하므로 주석을 생락하였다.
-	if(uart3_rx_data == '4' || (SW4_pressed == FALSE && IS_SW4_PRESSING() == TRUE))
+	/*
+	 * UART Interrupt 방식
+	 * red, green, blue LED 전부 같은 방식으로 동작한다.
+	 */
+	if(uart3_rx_flag) // UART3으로 데이터를 받아서 flag가 1이 되면
 	{
-		if(uart3_rx_data == '4') uart3_rx_data = 0;
-		else SW4_pressed = TRUE;
-
-		if(LED_target == LEFT) LED_target = RIGHT;
-		else if(LED_target == RIGHT) LED_target = LEFT;
-	}
-	if(SW4_pressed == TRUE && IS_SW4_PRESSING() == FALSE)
-	{
-		SW4_pressed = FALSE;
+		uart3_rx_flag = 0; // flag를 0으로 해준 후
+		switch(uart3_rx_data) { // 받아온 데이터로 각각의 동작을 수행한다. 1~3은 red, green, blue LED toggle이고, 4는 LED 선택이다.
+			case '1':
+				if(select_left_LED) L_RED_LED_TOGGLE();
+				else R_RED_LED_TOGGLE();
+				break;
+			case '2':
+				if(select_left_LED) L_GREEN_LED_TOGGLE();
+				else R_GREEN_LED_TOGGLE();
+				break;
+			case '3':
+				if(select_left_LED) L_BLUE_LED_TOGGLE();
+				else R_BLUE_LED_TOGGLE();
+				break;
+			case '4':
+				select_left_LED = !select_left_LED;
+		}
 	}
   }
   /* USER CODE END 3 */
@@ -268,6 +249,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 	if(huart->Instance == USART3)
 	{
 		HAL_UART_Receive_IT(&huart3, &uart3_rx_data, sizeof(uart3_rx_data));
+		uart3_rx_flag = 1;
 	}
 }
 /* USER CODE END 4 */

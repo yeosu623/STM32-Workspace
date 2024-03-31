@@ -1,67 +1,17 @@
-21:02:41 **** Incremental Build of configuration Debug for project 1-2. LED toggle with button and UART transmission ****
+16:58:35 **** Incremental Build of configuration Debug for project 1-2. LED toggle with button and UART transmission ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-In file included from ../Core/Src/main.c:26:
-../Core/Src/main.c: In function 'main':
-../Core/Inc/easyMacros.h:27:66: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
-   27 | #define IS_SW1_PRESSING()    HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
-      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
-../Core/Src/main.c:122:54: note: in expansion of macro 'IS_SW1_PRESSING'
-  122 |  if(uart3_rx_data == '1' || (SW1_pressed == FALSE && IS_SW1_PRESSING() == TRUE)) // uart3?—?„œ '1'?„ ë°›ê±°?‚˜, SW1?„ ?ˆ„ë¥´ëŠ” ?ˆœê°?
-      |                                                      ^~~~~~~~~~~~~~~
-../Core/Inc/easyMacros.h:27:66: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
-   27 | #define IS_SW1_PRESSING()    HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_3) == GPIO_PIN_SET
-      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
-../Core/Src/main.c:138:28: note: in expansion of macro 'IS_SW1_PRESSING'
-  138 |  if(SW1_pressed == TRUE && IS_SW1_PRESSING() == FALSE) // SW1ë¥? ?•Œê²? ?˜ë©?
-      |                            ^~~~~~~~~~~~~~~
-../Core/Inc/easyMacros.h:28:67: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
-   28 | #define IS_SW2_PRESSING()    HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15) == GPIO_PIN_SET
-      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
-../Core/Src/main.c:145:54: note: in expansion of macro 'IS_SW2_PRESSING'
-  145 |  if(uart3_rx_data == '2' || (SW2_pressed == FALSE && IS_SW2_PRESSING() == TRUE))
-      |                                                      ^~~~~~~~~~~~~~~
-../Core/Inc/easyMacros.h:28:67: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
-   28 | #define IS_SW2_PRESSING()    HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_15) == GPIO_PIN_SET
-      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
-../Core/Src/main.c:161:28: note: in expansion of macro 'IS_SW2_PRESSING'
-  161 |  if(SW2_pressed == TRUE && IS_SW2_PRESSING() == FALSE)
-      |                            ^~~~~~~~~~~~~~~
-../Core/Inc/easyMacros.h:29:66: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
-   29 | #define IS_SW3_PRESSING()    HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) == GPIO_PIN_SET
-      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
-../Core/Src/main.c:168:54: note: in expansion of macro 'IS_SW3_PRESSING'
-  168 |  if(uart3_rx_data == '3' || (SW3_pressed == FALSE && IS_SW3_PRESSING() == TRUE))
-      |                                                      ^~~~~~~~~~~~~~~
-../Core/Inc/easyMacros.h:29:66: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
-   29 | #define IS_SW3_PRESSING()    HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_4) == GPIO_PIN_SET
-      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
-../Core/Src/main.c:184:28: note: in expansion of macro 'IS_SW3_PRESSING'
-  184 |  if(SW3_pressed == TRUE && IS_SW3_PRESSING() == FALSE)
-      |                            ^~~~~~~~~~~~~~~
-../Core/Inc/easyMacros.h:30:67: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
-   30 | #define IS_SW4_PRESSING()    HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_10) == GPIO_PIN_SET
-      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
-../Core/Src/main.c:192:54: note: in expansion of macro 'IS_SW4_PRESSING'
-  192 |  if(uart3_rx_data == '4' || (SW4_pressed == FALSE && IS_SW4_PRESSING() == TRUE))
-      |                                                      ^~~~~~~~~~~~~~~
-../Core/Inc/easyMacros.h:30:67: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
-   30 | #define IS_SW4_PRESSING()    HAL_GPIO_ReadPin(GPIOD, GPIO_PIN_10) == GPIO_PIN_SET
-      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
-../Core/Src/main.c:200:28: note: in expansion of macro 'IS_SW4_PRESSING'
-  200 |  if(SW4_pressed == TRUE && IS_SW4_PRESSING() == FALSE)
-      |                            ^~~~~~~~~~~~~~~
 arm-none-eabi-gcc -o "1-2. LED toggle with button and UART transmission.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\1-2. LED toggle with button and UART transmission\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-2. LED toggle with button and UART transmission.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: 1-2. LED toggle with button and UART transmission.elf
  
 arm-none-eabi-size   1-2.\ LED\ toggle\ with\ button\ and\ UART\ transmission.elf 
 arm-none-eabi-objdump -h -S  1-2.\ LED\ toggle\ with\ button\ and\ UART\ transmission.elf  > "1-2. LED toggle with button and UART transmission.list"
    text	   data	    bss	    dec	    hex	filename
-  11660	     20	   1660	  13340	   341c	1-2. LED toggle with button and UART transmission.elf
+  11796	     24	   1656	  13476	   34a4	1-2. LED toggle with button and UART transmission.elf
 Finished building: default.size.stdout
  
 Finished building: 1-2. LED toggle with button and UART transmission.list
  
 
-21:02:43 Build Finished. 0 errors, 8 warnings. (took 2s.667ms)
+16:58:35 Build Finished. 0 errors, 0 warnings. (took 584ms)
 

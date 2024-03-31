@@ -89,12 +89,12 @@ int main(void)
   MX_GPIO_Init();
 
   /* USER CODE BEGIN 2 */
-  LEFT_LED_RED_SET();
-  LEFT_LED_GREEN_SET();
-  LEFT_LED_BLUE_SET();
-  RIGHT_LED_RED_SET();
-  RIGHT_LED_GREEN_SET();
-  RIGHT_LED_BLUE_SET();
+  L_RED_LED_OFF();
+  L_GREEN_LED_OFF();
+  L_BLUE_LED_OFF();
+  R_RED_LED_OFF();
+  R_GREEN_LED_OFF();
+  R_BLUE_LED_OFF();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -104,56 +104,40 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  /* 로직은 red, green, blue LED 전부 같은 방식으로 동작한다.
+	   *
+	   * 로직 설명
+	   * 버튼을 누르는 순간과 버튼을 때는 순간 전부 Rising Edge, Falling Edge 로 정의할 수 있다.
+	   * Rising Edge는 0->1로 신호가 바뀌는 순간이며, Falling Edge는 1->0으로 신호가 바뀌는 순간이다.
+	   * 즉, Rising Edge는 버튼을 누르기 전에는 신호가 0이였다가, 버튼을 누르는 중에는 신호가 1로 된다.
+	   * 그리고 Falling Edge는 버튼을 누르기 전에는 신호가 1이였다가, 버튼을 누르는 중에는 신호가 0으로 된다.
+	   *
+	   * 이를 종합해보면, "버튼을 누르기 전과 버튼을 누르는 중이 다른 경우"가 Rising Edge, Falling Edge의 조건이 된다.
+	   * 여기서 버튼을 누르고 있는 상태가 아니냐에 따라서 Rising Edge, Falling Edge를 구분할 수 있다.
+	   */
 
-	// LED - RED
-	// 빨강색 LED, 초록색 LED, 파랑색 LED 전부 동작원리가 같다.
-	if(SW1_pressed == FALSE && IS_SW1_PRESSING() == TRUE) // SW1을 누르고 있지 않다가 누르기 시작하는 그 시점부터
+	if(SW1_pressed != CHECK_SW1_PRESSING()) // 버튼을 누르기 전과 버튼을 누르는 중이 다르면 Rising Edge, Falling Edge의 조건이 된다.
 	{
-		SW1_pressed = TRUE; // SW1을 누르고 있는 상태라고 인식한다.
+		SW1_pressed = !SW1_pressed; // 버튼을 누른 상태를 반영한다.
 
-		if(IS_LEFT_LED_RED_RESET()) LEFT_LED_RED_SET(); // 만약 왼쪽 빨강색 LED가 꺼져있으면 켜주고,
-		else if(IS_LEFT_LED_RED_SET()) LEFT_LED_RED_RESET(); // 켜져있으면 꺼준다.
-	}
-	if(SW1_pressed == TRUE && IS_SW1_PRESSING() == FALSE) // SW1을 누르고 있다가 때기 시작하는 그 시점부터
-	{
-		SW1_pressed = FALSE; // SW1을 때고 있는 상태라고 인식한다.
-
-		if(IS_RIGHT_LED_RED_RESET()) RIGHT_LED_RED_SET(); // 만약 오른쪽 빨강색 LED가 꺼져있으면 켜주고,
-		else if(IS_RIGHT_LED_RED_SET())	RIGHT_LED_RED_RESET(); // 켜저있으면 꺼준다.
-	}
-
-
-	// LED - GREEN
-	if(SW2_pressed == FALSE && IS_SW2_PRESSING() == TRUE)
-	{
-		SW2_pressed = TRUE;
-
-		if(IS_LEFT_LED_GREEN_RESET()) LEFT_LED_GREEN_SET();
-		else if(IS_LEFT_LED_GREEN_SET()) LEFT_LED_GREEN_RESET();
-	}
-	if(SW2_pressed == TRUE && IS_SW2_PRESSING() == FALSE)
-	{
-		SW2_pressed = FALSE;
-
-		if(IS_RIGHT_LED_GREEN_RESET()) RIGHT_LED_GREEN_SET();
-		else if(IS_RIGHT_LED_GREEN_SET()) RIGHT_LED_GREEN_RESET();
+		if(SW1_pressed) L_RED_LED_TOGGLE(); // 만약 버튼을 누른 상태라면 왼쪽 LED를 토글하고,
+		else R_RED_LED_TOGGLE(); // 버튼을 땐 상태라면 오른쪽 LED를 토글한다.
 	}
 
-
-	// LED - BLUE
-	if(SW3_pressed == FALSE && IS_SW3_PRESSING() == TRUE)
+	if(SW2_pressed != CHECK_SW2_PRESSING())
 	{
-		SW3_pressed = TRUE;
+		SW2_pressed = !SW2_pressed;
 
-		if(IS_LEFT_LED_BLUE_RESET()) LEFT_LED_BLUE_SET();
-		else if(IS_LEFT_LED_BLUE_SET()) LEFT_LED_BLUE_RESET();
+		if(SW2_pressed) L_GREEN_LED_TOGGLE();
+		else R_GREEN_LED_TOGGLE();
 	}
-	if(SW3_pressed == TRUE && IS_SW3_PRESSING() == FALSE)
-	{
-		SW3_pressed = FALSE;
 
-		if(IS_RIGHT_LED_BLUE_RESET()) RIGHT_LED_BLUE_SET();
-		else if(IS_RIGHT_LED_BLUE_SET()) RIGHT_LED_BLUE_RESET();
+	if(SW3_pressed != CHECK_SW3_PRESSING())
+	{
+		SW3_pressed = !SW3_pressed;
+
+		if(SW3_pressed) L_BLUE_LED_TOGGLE();
+		else R_BLUE_LED_TOGGLE();
 	}
   }
   /* USER CODE END 3 */
@@ -220,6 +204,7 @@ void Error_Handler(void)
   __disable_irq();
   while (1)
   {
+
   }
   /* USER CODE END Error_Handler_Debug */
 }
