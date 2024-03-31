@@ -8,3 +8,4 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-1.\ LED\ toggle\ with\ button
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-2.\ LED\ toggle\ with\ button\ and\ UART\ transmission\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-2.\ LED\ toggle\ with\ button\ and\ UART\ transmission\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-3.\ Count\ button\ pushing\ time\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-3.\ Count\ button\ pushing\ time\ Debug/activeLaunchTarget=null\:---
