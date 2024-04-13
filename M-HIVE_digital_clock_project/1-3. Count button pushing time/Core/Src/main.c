@@ -47,6 +47,11 @@
 
 /* USER CODE BEGIN PV */
 int SW1_pressed = FALSE;
+
+int show_point = OFF;
+int tim6_reset = FALSE;
+static unsigned int tim6_1ms = 0;
+static unsigned int tim6_100ms = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -120,9 +125,28 @@ int main(void)
 	{
 		SW1_pressed = !SW1_pressed;
 
-		if(SW1_pressed) L_RED_LED_TOGGLE();
-		else R_RED_LED_TOGGLE();
+		if(SW1_pressed)
+		{
+			L_RED_LED_TOGGLE();
+		}
+		else
+		{
+			R_RED_LED_TOGGLE();
+			tim6_reset = TRUE; // 버튼을 땔때, 다음에 시간 측정할 때 처음부터 할 수 있도록 초기화를 예약해놓는다.
+		}
 	}
+
+	/*
+	 * 7_SEG 표시 코드
+	 * timer6 카운트 증감은 tim6 인터럽트에서 처리하고,
+	 * 여기서는 7seg에 시간을 표시하는 코드만 작성하였습니다.
+	 */
+
+	if(tim6_100ms % 10 < 5) show_point = ON; // .0 ~ .4초 사이에는 점을 표시한다.
+	else show_point = OFF; // .5 ~ .9초 사이에는 점을 표시하지 않는다.
+
+	_7SEG_SetNumber(DGT1, tim6_100ms / 10, show_point); // 시간 정보와 점 표시 여부를 7SEG로 보낸다.
+	_7SEG_SetNumber(DGT2, tim6_100ms % 10, OFF); // 시간 정보와 점 표시 여부를 7SEG로 보낸다.
   }
   /* USER CODE END 3 */
 }
@@ -185,29 +209,25 @@ static void MX_NVIC_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) // Timer의 인터럽트가 발생되었는지를 확인하는 함수
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-	static unsigned int cnt_1ms = 0; // 1ms가 몇번 지났는지 세는 변수
-	static unsigned int cnt_100ms = 0; // 100ms가 몇번 지났는지 세는 변수
-	int dp1; // 7SEG의 첫번째 숫자 밑의 점을 표시하는지를 나타내는 변수
-
-	if(htim->Instance == TIM6) // TIM6 인터럽트가 발생되었을 때
+	if(htim->Instance == TIM6)
 	{
-		if(SW1_pressed) // SW1 버튼이 눌려있다면
+		if(SW1_pressed)
 		{
-			cnt_1ms++; // 시간 측정을 시작한다.
-			cnt_100ms = cnt_1ms / 100;
+			if(tim6_reset) // 타이머를 새롭게 시작할 떄
+			{
+				tim6_1ms = 0; // 모든 시간을 0으로 초기화 해준다.
+				tim6_100ms = 0;
+				tim6_reset = FALSE; // 초기화는 한 번만 진행하므로, 변수를 FALSE로 설정한다.
+			}
 
-			if(cnt_100ms % 10 < 5) dp1 = ON; // 만약 .0 ~ .4초 사이라면 점을 표시하고,
-			else dp1 = OFF; // 아니라면 점을 표시하지 않는다.
-
-			_7SEG_SetNumber(DGT1, cnt_100ms / 10, dp1); // 시간을 7SEG에 표시한다.
-			_7SEG_SetNumber(DGT2, cnt_100ms % 10, OFF);
-		}
-		else // 버튼이 아무것도 눌려있지 않다면
-		{
-			cnt_1ms = 0; // 시간을 초기화 한다.
-			cnt_100ms = 0;
+			tim6_1ms++;
+			if(tim6_1ms == 100)
+			{
+				tim6_1ms = 0;
+				tim6_100ms++;
+			}
 		}
 	}
 }
