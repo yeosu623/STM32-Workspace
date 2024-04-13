@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="dp"/>
+		<item key="selection" value="MX_NVIC"/>
 		<list key="findhistory">
+			<item value="MX_NVIC"/>
 			<item value="DP"/>
 			<item value="DP7"/>
 			<item value="NVIC"/>
