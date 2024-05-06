@@ -29,7 +29,32 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
+typedef struct _Seg7 { // 7-Seg 설정 변수들
+	int point1;
+	int point2;
+} Seg7;
 
+typedef enum _Stopwatch_state { // Stopwatch 설정 변수들
+	RUNNING,
+	PAUSED,
+	STOPPED
+} Stopwatch_state;
+
+typedef struct _Stopwatch_time {
+	unsigned int hour;
+	unsigned int minute;
+	unsigned int second;
+	unsigned int milisecond;
+} Stopwatch_time;
+
+typedef struct _Stopwatch {
+	Stopwatch_state state;
+	Stopwatch_time time;
+} Stopwatch;
+
+typedef enum _Mode { // 디지털 알람 시계의 모드 정의. 현재는 Stopwatch만 있다.
+	STOPWATCH
+} Mode;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -45,26 +70,16 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-int show_7seg_point = FALSE; // 0.5초마다 7-Seg의 점을 깜박거리기 위해서 있는 변수이다.
-int stopwatch_start = FALSE; // SW2를 누르면 이 변수가 TRUE가 되어서, Stopwatch가 시작된다.
-int stopwatch_reset = FALSE; // SW3을 누르면 이 변수가 TRUE가 되어서, Stopwatch가 초기화된다.
-static unsigned int stopwatch_time_1h = 0; // Stopwatch의 1시간 단위의 데이터
-static unsigned int stopwatch_time_1m = 0; // Stopwatch의 1분 단위의 데이터
-static unsigned int stopwatch_time_1s = 0; // Stopwatch의 1초 단위의 데이터
-static unsigned int stopwatch_time_1ms = 0; // Stopwatch의 1밀리초 단위의 데이터
-
-typedef enum _Mode { // 디지털 알람 시계의 모드 정의. 현재는 Stopwatch만 있다.
-	Stopwatch = 0,
-	Other
-} Mode;
-Mode mode = Stopwatch;
+Seg7 seg7 = {OFF, OFF};
+Mode mode = STOPWATCH;
+Stopwatch stopwatch = {STOPPED, {0, 0, 0, 0}};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_NVIC_Init(void);
 /* USER CODE BEGIN PFP */
-
+void convert_stopwatch_time_format();
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -130,14 +145,14 @@ int main(void)
 	   * Stopwatch 모드일 경우. 여기서는 7-Seg에 시간을 표시해주는 일만 한다.
 	   * 밑의 코드에서 버튼의 외부 인터럽트를 통하여 Stopwatch 시작과 리셋을 조작한다.
 	   */
-	  case Stopwatch :
+	  case STOPWATCH :
 		    // 0.5초마다 점을 토글시키는 코드
-			if(stopwatch_time_1ms < 500) show_7seg_point = ON;
-			else show_7seg_point = OFF;
+			if(stopwatch.time.milisecond < 500) seg7.point1 = ON;
+			else seg7.point1 = OFF;
 
 			// 첫째 자리는 1초 단위로, 둘째 자리는 0.1초 단위로 7-Seg에 표시한다.
-			_7SEG_SetNumber(DGT1, stopwatch_time_1s % 10, show_7seg_point);
-			_7SEG_SetNumber(DGT2, stopwatch_time_1ms / 100, OFF);
+			_7SEG_SetNumber(DGT1, stopwatch.time.second % 10, seg7.point1);
+			_7SEG_SetNumber(DGT2, stopwatch.time.milisecond / 100, OFF);
 	  }
   }
   /* USER CODE END 3 */
@@ -205,41 +220,38 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) // 1ms 주기의 Tim
 {
 	if(htim->Instance == TIM6)
 	{
-		// Stopwatch 시작할시, 1ms 단위로 시간을 누적하여 측정한다.
-		if(stopwatch_start)
+		if(stopwatch.state == RUNNING)
 		{
-			stopwatch_time_1ms++;
-			convert_stopwatch_time_format(); // Stopwatch의 1ms를 1s, 1m, 1h로 변환하는 함수
+			stopwatch.time.milisecond++;
+			convert_stopwatch_time_format();
 		}
 
-		// Stopwatch를 리셋할시, 누적된 시간을 0으로 초기화 한다.
-		if(stopwatch_reset)
+		if(stopwatch.state == STOPPED)
 		{
-			stopwatch_time_1ms = 0;
-			stopwatch_time_1s = 0;
-			stopwatch_time_1m = 0;
-			stopwatch_time_1h = 0;
-			stopwatch_reset = FALSE;
+			stopwatch.time.hour = 0;
+			stopwatch.time.minute = 0;
+			stopwatch.time.second = 0;
+			stopwatch.time.milisecond = 0;
 		}
 	}
 }
 
 void convert_stopwatch_time_format()
 {
-	if(stopwatch_time_1ms == 1000)
+	if(stopwatch.time.milisecond == 1000)
 	{
-		stopwatch_time_1ms = 0;
-		stopwatch_time_1s++;
+		stopwatch.time.milisecond = 0;
+		stopwatch.time.second++;
 	}
-	if(stopwatch_time_1s == 60)
+	if(stopwatch.time.second == 60)
 	{
-		stopwatch_time_1s = 0;
-		stopwatch_time_1m++;
+		stopwatch.time.second = 0;
+		stopwatch.time.minute++;
 	}
-	if(stopwatch_time_1m == 60)
+	if(stopwatch.time.minute == 60)
 	{
-		stopwatch_time_1m = 0;
-		stopwatch_time_1h++;
+		stopwatch.time.minute = 0;
+		stopwatch.time.hour++;
 	}
 }
 
@@ -258,8 +270,9 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) // 외부 인터럽트를 통하�
 
 		switch(mode)
 		{
-		case Stopwatch :
-			stopwatch_start = !stopwatch_start; // Stopwatch의 Start/Pause를 토글한다.
+		case STOPWATCH :
+			if(stopwatch.state == RUNNING) stopwatch.state = PAUSED;
+			else stopwatch.state = RUNNING; // PAUSED, STOPPED 에서는 RUNNING 상태로 변경
 			break;
 		}
 	}
@@ -271,8 +284,8 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) // 외부 인터럽트를 통하�
 
 		switch(mode)
 		{
-		case Stopwatch :
-			if(!stopwatch_start) stopwatch_reset = TRUE; // Stopwatch가 Pause일 경우, Stopwatch를 Reset한다.
+		case STOPWATCH :
+			if(stopwatch.state == PAUSED) stopwatch.state = STOPPED;
 			break;
 		}
 	}

@@ -2725,3 +2725,156 @@ Finished building: default.size.stdout
  
 Finished building: 2. Stopwatch - 7-Seg display and button input.list
  
+00:19:40 **** Build of configuration Debug for project 2. Stopwatch - 7-Seg display and button input ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:70:2: error: expected specifier-qualifier-list before 'static'
+   70 |  static unsigned int hour;
+      |  ^~~~~~
+../Core/Src/main.c:80:34: warning: excess elements in struct initializer
+   80 | Stopwatch stopwatch = {STOPPED, {0, 0, 0, 0}};
+      |                                  ^
+../Core/Src/main.c:80:34: note: (near initialization for 'stopwatch.time')
+../Core/Src/main.c:80:37: warning: excess elements in struct initializer
+   80 | Stopwatch stopwatch = {STOPPED, {0, 0, 0, 0}};
+      |                                     ^
+../Core/Src/main.c:80:37: note: (near initialization for 'stopwatch.time')
+../Core/Src/main.c:80:40: warning: excess elements in struct initializer
+   80 | Stopwatch stopwatch = {STOPPED, {0, 0, 0, 0}};
+      |                                        ^
+../Core/Src/main.c:80:40: note: (near initialization for 'stopwatch.time')
+../Core/Src/main.c:80:43: warning: excess elements in struct initializer
+   80 | Stopwatch stopwatch = {STOPPED, {0, 0, 0, 0}};
+      |                                           ^
+../Core/Src/main.c:80:43: note: (near initialization for 'stopwatch.time')
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:161:21: error: 'Stopwatch_time' {aka 'struct _Stopwatch_time'} has no member named 'milisecond'
+  161 |    if(stopwatch.time.milisecond < 500) seg7.point1 = ON;
+      |                     ^
+../Core/Src/main.c:165:40: error: 'Stopwatch_time' {aka 'struct _Stopwatch_time'} has no member named 'second'
+  165 |    _7SEG_SetNumber(DGT1, stopwatch.time.second % 10, seg7.point1);
+      |                                        ^
+../Core/Src/main.c:166:40: error: 'Stopwatch_time' {aka 'struct _Stopwatch_time'} has no member named 'milisecond'
+  166 |    _7SEG_SetNumber(DGT2, stopwatch.time.milisecond / 100, OFF);
+      |                                        ^
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:236:18: error: 'Stopwatch_time' {aka 'struct _Stopwatch_time'} has no member named 'milisecond'
+  236 |    stopwatch.time.milisecond++;
+      |                  ^
+../Core/Src/main.c:237:4: warning: implicit declaration of function 'convert_stopwatch_time_format' [-Wimplicit-function-declaration]
+  237 |    convert_stopwatch_time_format();
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:242:18: error: 'Stopwatch_time' {aka 'struct _Stopwatch_time'} has no member named 'hour'
+  242 |    stopwatch.time.hour = 0;
+      |                  ^
+../Core/Src/main.c:243:18: error: 'Stopwatch_time' {aka 'struct _Stopwatch_time'} has no member named 'minute'
+  243 |    stopwatch.time.minute = 0;
+      |                  ^
+../Core/Src/main.c:244:18: error: 'Stopwatch_time' {aka 'struct _Stopwatch_time'} has no member named 'second'
+  244 |    stopwatch.time.second = 0;
+      |                  ^
+../Core/Src/main.c:245:18: error: 'Stopwatch_time' {aka 'struct _Stopwatch_time'} has no member named 'milisecond'
+  245 |    stopwatch.time.milisecond = 0;
+      |                  ^
+../Core/Src/main.c:246:4: error: 'stopwatch_reset' undeclared (first use in this function); did you mean 'Stopwatch_time'?
+  246 |    stopwatch_reset = FALSE;
+      |    ^~~~~~~~~~~~~~~
+      |    Stopwatch_time
+../Core/Src/main.c:246:4: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:251:6: warning: conflicting types for 'convert_stopwatch_time_format'
+  251 | void convert_stopwatch_time_format()
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:237:4: note: previous implicit declaration of 'convert_stopwatch_time_format' was here
+  237 |    convert_stopwatch_time_format();
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'convert_stopwatch_time_format':
+../Core/Src/main.c:253:19: error: 'Stopwatch_time' {aka 'struct _Stopwatch_time'} has no member named 'milisecond'
+  253 |  if(stopwatch.time.milisecond == 1000)
+      |                   ^
+../Core/Src/main.c:255:17: error: 'Stopwatch_time' {aka 'struct _Stopwatch_time'} has no member named 'milisecond'
+  255 |   stopwatch.time.milisecond = 0;
+      |                 ^
+../Core/Src/main.c:256:17: error: 'Stopwatch_time' {aka 'struct _Stopwatch_time'} has no member named 'second'
+  256 |   stopwatch.time.second++;
+      |                 ^
+../Core/Src/main.c:258:19: error: 'Stopwatch_time' {aka 'struct _Stopwatch_time'} has no member named 'second'
+  258 |  if(stopwatch.time.second == 60)
+      |                   ^
+../Core/Src/main.c:260:17: error: 'Stopwatch_time' {aka 'struct _Stopwatch_time'} has no member named 'second'
+  260 |   stopwatch.time.second = 0;
+      |                 ^
+../Core/Src/main.c:261:17: error: 'Stopwatch_time' {aka 'struct _Stopwatch_time'} has no member named 'minute'
+  261 |   stopwatch.time.minute++;
+      |                 ^
+../Core/Src/main.c:263:19: error: 'Stopwatch_time' {aka 'struct _Stopwatch_time'} has no member named 'minute'
+  263 |  if(stopwatch.time.minute == 60)
+      |                   ^
+../Core/Src/main.c:265:17: error: 'Stopwatch_time' {aka 'struct _Stopwatch_time'} has no member named 'minute'
+  265 |   stopwatch.time.minute = 0;
+      |                 ^
+../Core/Src/main.c:266:17: error: 'Stopwatch_time' {aka 'struct _Stopwatch_time'} has no member named 'hour'
+  266 |   stopwatch.time.hour++;
+      |                 ^
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+00:20:12 **** Incremental Build of configuration Debug for project 2. Stopwatch - 7-Seg display and button input ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:237:4: warning: implicit declaration of function 'convert_stopwatch_time_format' [-Wimplicit-function-declaration]
+  237 |    convert_stopwatch_time_format();
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:246:4: error: 'stopwatch_reset' undeclared (first use in this function); did you mean 'Stopwatch_time'?
+  246 |    stopwatch_reset = FALSE;
+      |    ^~~~~~~~~~~~~~~
+      |    Stopwatch_time
+../Core/Src/main.c:246:4: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:251:6: warning: conflicting types for 'convert_stopwatch_time_format'
+  251 | void convert_stopwatch_time_format()
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:237:4: note: previous implicit declaration of 'convert_stopwatch_time_format' was here
+  237 |    convert_stopwatch_time_format();
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+00:20:28 **** Incremental Build of configuration Debug for project 2. Stopwatch - 7-Seg display and button input ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:237:4: warning: implicit declaration of function 'convert_stopwatch_time_format' [-Wimplicit-function-declaration]
+  237 |    convert_stopwatch_time_format();
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:250:6: warning: conflicting types for 'convert_stopwatch_time_format'
+  250 | void convert_stopwatch_time_format()
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:237:4: note: previous implicit declaration of 'convert_stopwatch_time_format' was here
+  237 |    convert_stopwatch_time_format();
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "2. Stopwatch - 7-Seg display and button input.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\2. Stopwatch - 7-Seg display and button input\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2. Stopwatch - 7-Seg display and button input.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 2. Stopwatch - 7-Seg display and button input.elf
+ 
+arm-none-eabi-size   2.\ Stopwatch\ -\ 7-Seg\ display\ and\ button\ input.elf 
+arm-none-eabi-objdump -h -S  2.\ Stopwatch\ -\ 7-Seg\ display\ and\ button\ input.elf  > "2. Stopwatch - 7-Seg display and button input.list"
+   text	   data	    bss	    dec	    hex	filename
+  11388	     40	   1648	  13076	   3314	2. Stopwatch - 7-Seg display and button input.elf
+Finished building: default.size.stdout
+ 
+Finished building: 2. Stopwatch - 7-Seg display and button input.list
+ 
+00:26:18 **** Incremental Build of configuration Debug for project 2. Stopwatch - 7-Seg display and button input ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "2. Stopwatch - 7-Seg display and button input.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\2. Stopwatch - 7-Seg display and button input\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2. Stopwatch - 7-Seg display and button input.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 2. Stopwatch - 7-Seg display and button input.elf
+ 
+arm-none-eabi-size   2.\ Stopwatch\ -\ 7-Seg\ display\ and\ button\ input.elf 
+arm-none-eabi-objdump -h -S  2.\ Stopwatch\ -\ 7-Seg\ display\ and\ button\ input.elf  > "2. Stopwatch - 7-Seg display and button input.list"
+   text	   data	    bss	    dec	    hex	filename
+  11388	     40	   1656	  13084	   331c	2. Stopwatch - 7-Seg display and button input.elf
+Finished building: default.size.stdout
+ 
+Finished building: 2. Stopwatch - 7-Seg display and button input.list
+ 
