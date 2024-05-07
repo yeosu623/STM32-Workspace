@@ -1,0 +1,3 @@
+../Core/Src/lap.c:10:6:lap_measure	32	static
+../Core/Src/lap.c:48:6:lap_display_record	40	static
+../Core/Src/lap.c:81:6:lap_clear	8	static

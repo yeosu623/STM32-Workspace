@@ -677,3 +677,51 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-05-06 23:52:33.551
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-05-07 01:00:19.335 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\3. Stopwatch - CLCD display and lap timer\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\3. Stopwatch - CLCD display and lap timer\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-05-07 01:00:40.487
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-05-07 01:00:40.575
+!MESSAGE Log4j initialized with config file C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-05-07 01:00:51.884
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 4 77 2024-05-07 01:00:52.891
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2024-05-07 01:00:52.892
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2024-05-07 01:00:52.892
+!MESSAGE C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\3. Stopwatch - CLCD display and lap timer overlaps the location of another project: '3. Stopwatch - CLCD display and lap timer'
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-07 01:01:23.383
+!MESSAGE Indexed '3. Stopwatch - CLCD display and lap timer' (24 sources, 113 headers) in 2.63 sec: 9,957 declarations; 53,163 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (0.23%)
+
+!ENTRY org.eclipse.core.resources 4 77 2024-05-07 01:03:36.169
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2024-05-07 01:03:36.169
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2024-05-07 01:03:36.169
+!MESSAGE C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\3. Stopwatch - CLCD display and lap timer overlaps the location of another project: '3. Stopwatch - CLCD display and lap timer'
+!SESSION 2024-05-07 23:47:53.038 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-05-07 23:48:10.354
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-05-07 23:48:10.450
+!MESSAGE Log4j initialized with config file C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-05-07 23:48:19.692
+!MESSAGE Started RMI Server, listening on port 41337
