@@ -1,0 +1,6 @@
+/* functions for handle button event. */
+void button1_start();
+void show_press_time();
+void short_release();
+void mid_release();
+void long_release();

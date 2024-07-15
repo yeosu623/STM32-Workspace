@@ -1,0 +1,3 @@
+void show_time();
+void clear_time();
+void convert_stopwatch_time_format();

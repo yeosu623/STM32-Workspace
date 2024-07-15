@@ -6,19 +6,23 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="measure_release"/>
 		<list key="findhistory">
+			<item value="MEASURE_RELEASE"/>
+			<item value="R_BLUE"/>
+			<item value="DGT"/>
+			<item value="clear_time"/>
+			<item value="show_time"/>
+			<item value="button"/>
+			<item value="700"/>
+			<item value="2500"/>
+			<item value="MID_LONG_BOUNDARY_TIME"/>
+			<item value="button1"/>
 			<item value="FALSE"/>
 			<item value="int"/>
 			<item value="unsigned"/>
 			<item value="uint"/>
 			<item value="mode"/>
-			<item value="//"/>
-			<item value="MX_NVIC"/>
-			<item value="DP"/>
-			<item value="DP7"/>
-			<item value="NVIC"/>
-			<item value="huart3"/>
 		</list>
 		<list key="replacehistory">
 		</list>

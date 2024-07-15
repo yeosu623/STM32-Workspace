@@ -1,0 +1,4 @@
+/* functions for handle button event. */
+void short_release();
+void mid_release();
+void long_release();

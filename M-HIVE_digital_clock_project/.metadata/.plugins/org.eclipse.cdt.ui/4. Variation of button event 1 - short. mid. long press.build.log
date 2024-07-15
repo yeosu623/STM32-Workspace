@@ -1,0 +1,86 @@
+08:01:09 **** Incremental Build of configuration Debug for project 4. Variation of button event 1 - short. mid. long press ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/button_event.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/button_event.d" -MT"Core/Src/button_event.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/button_event.o"
+../Core/Src/button_event.c: In function 'button1_show_press_time':
+../Core/Src/button_event.c:15:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   15 |  sprintf(clcd.str1, "%4d  %4d  %4d",
+      |  ^~~~~~~
+../Core/Src/button_event.c:15:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/button_event.c:5:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+    4 | #include "easyMacros.h"
+  +++ |+#include <stdio.h>
+    5 | 
+../Core/Src/button_event.c:15:14: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   15 |  sprintf(clcd.str1, "%4d  %4d  %4d",
+      |          ~~~~^~~~~
+      |              |
+      |              uint8_t * {aka unsigned char *}
+../Core/Src/button_event.c:15:14: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/button_event.c: In function 'button1_short_release':
+../Core/Src/button_event.c:31:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+   31 |  sprintf(clcd.str2, "SHORT RELEASE   ");
+      |  ^~~~~~~
+../Core/Src/button_event.c:31:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/button_event.c:31:14: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   31 |  sprintf(clcd.str2, "SHORT RELEASE   ");
+      |          ~~~~^~~~~
+      |              |
+      |              uint8_t * {aka unsigned char *}
+../Core/Src/button_event.c:31:14: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/button_event.c: In function 'button1_mid_release':
+../Core/Src/button_event.c:41:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+   41 |  sprintf(clcd.str2, "MID RELEASE     ");
+      |  ^~~~~~~
+../Core/Src/button_event.c:41:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/button_event.c:41:14: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   41 |  sprintf(clcd.str2, "MID RELEASE     ");
+      |          ~~~~^~~~~
+      |              |
+      |              uint8_t * {aka unsigned char *}
+../Core/Src/button_event.c:41:14: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/button_event.c: In function 'button1_long_release':
+../Core/Src/button_event.c:51:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+   51 |  sprintf(clcd.str2, "LONG RELEASE    ");
+      |  ^~~~~~~
+../Core/Src/button_event.c:51:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/button_event.c:51:14: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   51 |  sprintf(clcd.str2, "LONG RELEASE    ");
+      |          ~~~~^~~~~
+      |              |
+      |              uint8_t * {aka unsigned char *}
+../Core/Src/button_event.c:51:14: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/button_event.c: In function 'button1_short_release':
+../Core/Src/button_event.c:31:38: warning: 'sprintf' writing a terminating nul past the end of the destination [-Wformat-overflow=]
+   31 |  sprintf(clcd.str2, "SHORT RELEASE   ");
+      |                                      ^
+../Core/Src/button_event.c:31:2: note: 'sprintf' output 17 bytes into a destination of size 16
+   31 |  sprintf(clcd.str2, "SHORT RELEASE   ");
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/button_event.c: In function 'button1_mid_release':
+../Core/Src/button_event.c:41:38: warning: 'sprintf' writing a terminating nul past the end of the destination [-Wformat-overflow=]
+   41 |  sprintf(clcd.str2, "MID RELEASE     ");
+      |                                      ^
+../Core/Src/button_event.c:41:2: note: 'sprintf' output 17 bytes into a destination of size 16
+   41 |  sprintf(clcd.str2, "MID RELEASE     ");
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/button_event.c: In function 'button1_long_release':
+../Core/Src/button_event.c:51:38: warning: 'sprintf' writing a terminating nul past the end of the destination [-Wformat-overflow=]
+   51 |  sprintf(clcd.str2, "LONG RELEASE    ");
+      |                                      ^
+../Core/Src/button_event.c:51:2: note: 'sprintf' output 17 bytes into a destination of size 16
+   51 |  sprintf(clcd.str2, "LONG RELEASE    ");
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "4. Variation of button event 1 - short. mid. long press.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\4. Variation of button event 1 - short. mid. long press\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4. Variation of button event 1 - short. mid. long press.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 4. Variation of button event 1 - short. mid. long press.elf
+ 
+arm-none-eabi-size   4.\ Variation\ of\ button\ event\ 1\ -\ short.\ mid.\ long\ press.elf 
+arm-none-eabi-objdump -h -S  4.\ Variation\ of\ button\ event\ 1\ -\ short.\ mid.\ long\ press.elf  > "4. Variation of button event 1 - short. mid. long press.list"
+   text	   data	    bss	    dec	    hex	filename
+  16832	    148	   1860	  18840	   4998	4. Variation of button event 1 - short. mid. long press.elf
+Finished building: default.size.stdout
+ 
+Finished building: 4. Variation of button event 1 - short. mid. long press.list
+ 
+
+08:01:09 Build Finished. 0 errors, 12 warnings. (took 633ms)
+

@@ -1,0 +1,6 @@
+void show_time();
+void clear_time();
+void stopwatch_run_and_pause();
+void stopwatch_measure_lap_or_stop();
+void stopwatch_dlsplay_record();
+void convert_stopwatch_time_format();

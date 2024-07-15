@@ -1,0 +1,11 @@
+06:50:06 **** Incremental Build of configuration Debug for project 4. Variation of button event 1 - short, mid, long press ****
+make -j8 all 
+arm-none-eabi-gcc -o "4. Variation of button event 1 - short, mid, long press.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\4. Variation of button event 1 - short, mid, long press\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4. Variation of button event 1 - short, mid, long press.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: cannot find  mid: No such file or directory
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: cannot find  long press.map: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: 4. Variation of button event 1 - short, mid, long press.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+06:50:06 Build Failed. 3 errors, 0 warnings. (took 269ms)
+
