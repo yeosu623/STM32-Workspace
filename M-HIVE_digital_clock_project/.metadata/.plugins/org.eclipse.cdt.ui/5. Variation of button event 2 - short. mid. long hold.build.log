@@ -1,0 +1,165 @@
+21:26:12 **** Incremental Build of configuration Debug for project 5. Variation of button event 2 - short. mid. long hold ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/button_event.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/button_event.d" -MT"Core/Src/button_event.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/button_event.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/button_event.c: In function 'button1_show_press_time':
+../Core/Src/button_event.c:17:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   17 |  sprintf(clcd.str1, "%4d%4d %4d%3d",
+      |  ^~~~~~~
+../Core/Src/button_event.c:17:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/button_event.c:5:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+    4 | #include "easyMacros.h"
+  +++ |+#include <stdio.h>
+    5 | 
+../Core/Src/button_event.c:17:14: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   17 |  sprintf(clcd.str1, "%4d%4d %4d%3d",
+      |          ~~~~^~~~~
+      |              |
+      |              uint8_t * {aka unsigned char *}
+../Core/Src/button_event.c:17:14: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/button_event.c: In function 'button1_short_hold':
+../Core/Src/button_event.c:57:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+   57 |  sprintf(clcd.str2, "SHORT HOLD      ");
+      |  ^~~~~~~
+../Core/Src/button_event.c:57:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/button_event.c:57:14: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   57 |  sprintf(clcd.str2, "SHORT HOLD      ");
+      |          ~~~~^~~~~
+      |              |
+      |              uint8_t * {aka unsigned char *}
+../Core/Src/button_event.c:57:14: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/button_event.c: In function 'button1_mid_hold':
+../Core/Src/button_event.c:64:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+   64 |  sprintf(clcd.str2, "MID HOLD        ");
+      |  ^~~~~~~
+../Core/Src/button_event.c:64:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/button_event.c:64:14: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   64 |  sprintf(clcd.str2, "MID HOLD        ");
+      |          ~~~~^~~~~
+      |              |
+      |              uint8_t * {aka unsigned char *}
+../Core/Src/button_event.c:64:14: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/button_event.c: In function 'button1_long_hold':
+../Core/Src/button_event.c:71:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+   71 |  sprintf(clcd.str2, "LONG HOLD       ");
+      |  ^~~~~~~
+../Core/Src/button_event.c:71:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/button_event.c:71:14: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   71 |  sprintf(clcd.str2, "LONG HOLD       ");
+      |          ~~~~^~~~~
+      |              |
+      |              uint8_t * {aka unsigned char *}
+../Core/Src/button_event.c:71:14: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/button_event.c: In function 'button1_short_release':
+../Core/Src/button_event.c:84:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+   84 |  sprintf(clcd.str2, "SHORT RELEASE   ");
+      |  ^~~~~~~
+../Core/Src/button_event.c:84:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/button_event.c:84:14: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   84 |  sprintf(clcd.str2, "SHORT RELEASE   ");
+      |          ~~~~^~~~~
+      |              |
+      |              uint8_t * {aka unsigned char *}
+../Core/Src/main.c: In function 'main':
+../Core/Src/button_event.c:84:14: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:131:4: warning: enumeration value 'READY' not handled in switch [-Wswitch]
+  131 |    switch(lap.state)
+      |    ^~~~~~
+../Core/Src/main.c:141:4: warning: enumeration value 'MEASURE_HOLD' not handled in switch [-Wswitch]
+  141 |    switch(button1.state)
+      |    ^~~~~~
+../Core/Src/main.c:141:4: warning: enumeration value 'MEASURE_RELEASE' not handled in switch [-Wswitch]
+../Core/Src/button_event.c: In function 'button1_mid_release':
+../Core/Src/button_event.c:95:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+   95 |  sprintf(clcd.str2, "MID RELEASE     ");
+      |  ^~~~~~~
+../Core/Src/button_event.c:95:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/button_event.c:95:14: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   95 |  sprintf(clcd.str2, "MID RELEASE     ");
+      |          ~~~~^~~~~
+      |              |
+      |              uint8_t * {aka unsigned char *}
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/button_event.c:95:14: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:245:3: warning: enumeration value 'STOPWATCH' not handled in switch [-Wswitch]
+  245 |   switch(clock_mode)
+      |   ^~~~~~
+../Core/Src/main.c:256:3: warning: enumeration value 'STOPWATCH' not handled in switch [-Wswitch]
+  256 |   switch(clock_mode)
+      |   ^~~~~~
+../Core/Src/main.c:269:3: warning: enumeration value 'BUTTON1' not handled in switch [-Wswitch]
+  269 |   switch(clock_mode)
+      |   ^~~~~~
+../Core/Src/button_event.c: In function 'button1_long_release':
+../Core/Src/button_event.c:106:2: warning: incompatible implicit declaration of built-in function 'sprintf'
+  106 |  sprintf(clcd.str2, "LONG RELEASE    ");
+      |  ^~~~~~~
+../Core/Src/button_event.c:106:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/button_event.c:106:14: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  106 |  sprintf(clcd.str2, "LONG RELEASE    ");
+      |          ~~~~^~~~~
+      |              |
+      |              uint8_t * {aka unsigned char *}
+../Core/Src/main.c:282:3: warning: enumeration value 'BUTTON1' not handled in switch [-Wswitch]
+  282 |   switch(clock_mode)
+      |   ^~~~~~
+../Core/Src/button_event.c:106:14: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:295:3: warning: enumeration value 'BUTTON1' not handled in switch [-Wswitch]
+  295 |   switch(clock_mode)
+      |   ^~~~~~
+../Core/Src/button_event.c: In function 'button1_short_hold':
+../Core/Src/button_event.c:57:38: warning: 'sprintf' writing a terminating nul past the end of the destination [-Wformat-overflow=]
+   57 |  sprintf(clcd.str2, "SHORT HOLD      ");
+      |                                      ^
+../Core/Src/button_event.c:57:2: note: 'sprintf' output 17 bytes into a destination of size 16
+   57 |  sprintf(clcd.str2, "SHORT HOLD      ");
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/button_event.c: In function 'button1_mid_hold':
+../Core/Src/button_event.c:64:38: warning: 'sprintf' writing a terminating nul past the end of the destination [-Wformat-overflow=]
+   64 |  sprintf(clcd.str2, "MID HOLD        ");
+      |                                      ^
+../Core/Src/button_event.c:64:2: note: 'sprintf' output 17 bytes into a destination of size 16
+   64 |  sprintf(clcd.str2, "MID HOLD        ");
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/button_event.c: In function 'button1_long_hold':
+../Core/Src/button_event.c:71:38: warning: 'sprintf' writing a terminating nul past the end of the destination [-Wformat-overflow=]
+   71 |  sprintf(clcd.str2, "LONG HOLD       ");
+      |                                      ^
+../Core/Src/button_event.c:71:2: note: 'sprintf' output 17 bytes into a destination of size 16
+   71 |  sprintf(clcd.str2, "LONG HOLD       ");
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/button_event.c: In function 'button1_short_release':
+../Core/Src/button_event.c:84:38: warning: 'sprintf' writing a terminating nul past the end of the destination [-Wformat-overflow=]
+   84 |  sprintf(clcd.str2, "SHORT RELEASE   ");
+      |                                      ^
+../Core/Src/button_event.c:84:2: note: 'sprintf' output 17 bytes into a destination of size 16
+   84 |  sprintf(clcd.str2, "SHORT RELEASE   ");
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/button_event.c: In function 'button1_mid_release':
+../Core/Src/button_event.c:95:38: warning: 'sprintf' writing a terminating nul past the end of the destination [-Wformat-overflow=]
+   95 |  sprintf(clcd.str2, "MID RELEASE     ");
+      |                                      ^
+../Core/Src/button_event.c:95:2: note: 'sprintf' output 17 bytes into a destination of size 16
+   95 |  sprintf(clcd.str2, "MID RELEASE     ");
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/button_event.c: In function 'button1_long_release':
+../Core/Src/button_event.c:106:38: warning: 'sprintf' writing a terminating nul past the end of the destination [-Wformat-overflow=]
+  106 |  sprintf(clcd.str2, "LONG RELEASE    ");
+      |                                      ^
+../Core/Src/button_event.c:106:2: note: 'sprintf' output 17 bytes into a destination of size 16
+  106 |  sprintf(clcd.str2, "LONG RELEASE    ");
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "5. Variation of button event 2 - short. mid. long hold.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\5. Variation of button event 2 - short. mid. long hold\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5. Variation of button event 2 - short. mid. long hold.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 5. Variation of button event 2 - short. mid. long hold.elf
+ 
+arm-none-eabi-size   5.\ Variation\ of\ button\ event\ 2\ -\ short.\ mid.\ long\ hold.elf 
+arm-none-eabi-objdump -h -S  5.\ Variation\ of\ button\ event\ 2\ -\ short.\ mid.\ long\ hold.elf  > "5. Variation of button event 2 - short. mid. long hold.list"
+   text	   data	    bss	    dec	    hex	filename
+  17240	    148	   1868	  19256	   4b38	5. Variation of button event 2 - short. mid. long hold.elf
+Finished building: default.size.stdout
+ 
+Finished building: 5. Variation of button event 2 - short. mid. long hold.list
+ 
+
+21:26:13 Build Finished. 0 errors, 29 warnings. (took 671ms)
+

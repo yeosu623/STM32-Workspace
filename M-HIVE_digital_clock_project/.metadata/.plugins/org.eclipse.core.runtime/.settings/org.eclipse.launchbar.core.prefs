@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:4. Variation of button event 1 - short. mid. long press Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:5. Variation of button event 2 - short. mid. long hold Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-1.\ LED\ toggle\ with\ button\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-1.\ LED\ toggle\ with\ button\ Debug/activeLaunchTarget=null\:---
@@ -15,3 +15,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:3.\ Stopwatch\ -\ CLCD\ display
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:3.\ Stopwatch\ -\ CLCD\ display\ and\ lap\ timer\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:4.\ Variation\ of\ button\ event\ 1\ -\ short.\ mid.\ long\ press\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:4.\ Variation\ of\ button\ event\ 1\ -\ short.\ mid.\ long\ press\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:5.\ Variation\ of\ button\ event\ 2\ -\ short.\ mid.\ long\ hold\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:5.\ Variation\ of\ button\ event\ 2\ -\ short.\ mid.\ long\ hold\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:5.\ Variation\ of\ button\ event\ 2\ -\ short.\ mid.\ long\ press/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:5.\ Variation\ of\ button\ event\ 2\ -\ short.\ mid.\ long\ press/activeLaunchTarget=null\:---

@@ -6,8 +6,15 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="measure_release"/>
+		<item key="selection" value="measure_hold"/>
 		<list key="findhistory">
+			<item value="increase_by"/>
+			<item value="increase"/>
+			<item value="measure_hold"/>
+			<item value="NONE"/>
+			<item value="show"/>
+			<item value="CLCD_Puts"/>
+			<item value="0, 0"/>
 			<item value="MEASURE_RELEASE"/>
 			<item value="R_BLUE"/>
 			<item value="DGT"/>
@@ -16,20 +23,13 @@
 			<item value="button"/>
 			<item value="700"/>
 			<item value="2500"/>
-			<item value="MID_LONG_BOUNDARY_TIME"/>
-			<item value="button1"/>
-			<item value="FALSE"/>
-			<item value="int"/>
-			<item value="unsigned"/>
-			<item value="uint"/>
-			<item value="mode"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="730"/>
-		<item key="DIALOG_Y_ORIGIN" value="370"/>
+		<item key="DIALOG_X_ORIGIN" value="1401"/>
+		<item key="DIALOG_Y_ORIGIN" value="445"/>
 		<item key="DIALOG_WIDTH" value="418"/>
 		<item key="DIALOG_HEIGHT" value="523"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
