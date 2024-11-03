@@ -1,0 +1,92 @@
+15:23:06 **** Incremental Build of configuration Debug for project 9. Alarm ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:64:33: warning: excess elements in struct initializer
+   64 | Clock_Config clock_config = {0, SECOND};
+      |                                 ^~~~~~
+../Core/Src/main.c:64:33: note: (near initialization for 'clock_config')
+In file included from ../Core/Src/main.c:26:
+../Core/Inc/easyMacros.h:14:15: warning: excess elements in struct initializer
+   14 | #define FALSE 0
+      |               ^
+../Core/Src/main.c:65:84: note: in expansion of macro 'FALSE'
+   65 | Alarm alarm = {0, {1,2,3,4,22}, {10, 20, 30, 40, 50}, {ON, ON, ON, ON, ON}, FALSE, FALSE};
+      |                                                                                    ^~~~~
+../Core/Inc/easyMacros.h:14:15: note: (near initialization for 'alarm')
+   14 | #define FALSE 0
+      |               ^
+../Core/Src/main.c:65:84: note: in expansion of macro 'FALSE'
+   65 | Alarm alarm = {0, {1,2,3,4,22}, {10, 20, 30, 40, 50}, {ON, ON, ON, ON, ON}, FALSE, FALSE};
+      |                                                                                    ^~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:126:3: warning: implicit declaration of function 'init_clock' [-Wimplicit-function-declaration]
+  126 |   init_clock();
+      |   ^~~~~~~~~~
+../Core/Src/main.c:143:4: warning: enumeration value 'READY' not handled in switch [-Wswitch]
+  143 |    switch(lap.state)
+      |    ^~~~~~
+../Core/Src/main.c:153:4: warning: implicit declaration of function 'show_clock' [-Wimplicit-function-declaration]
+  153 |    show_clock();
+      |    ^~~~~~~~~~
+../Core/Src/main.c:158:4: warning: implicit declaration of function 'show_clock_config' [-Wimplicit-function-declaration]
+  158 |    show_clock_config();
+      |    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:241:3: warning: implicit declaration of function 'clock_convert_time_format'; did you mean 'stopwatch_convert_time_format'? [-Wimplicit-function-declaration]
+  241 |   clock_convert_time_format();
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |   stopwatch_convert_time_format
+../Core/Src/main.c:251:4: warning: implicit declaration of function 'beep_buzzer_check' [-Wimplicit-function-declaration]
+  251 |    beep_buzzer_check();
+      |    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:267:4: warning: implicit declaration of function 'button2_measure_hold'; did you mean 'button1_measure_hold'? [-Wimplicit-function-declaration]
+  267 |    button2_measure_hold();
+      |    ^~~~~~~~~~~~~~~~~~~~
+      |    button1_measure_hold
+../Core/Src/main.c:272:4: warning: implicit declaration of function 'button3_measure_hold'; did you mean 'button1_measure_hold'? [-Wimplicit-function-declaration]
+  272 |    button3_measure_hold();
+      |    ^~~~~~~~~~~~~~~~~~~~
+      |    button1_measure_hold
+../Core/Src/main.c:277:4: warning: implicit declaration of function 'button4_measure_hold'; did you mean 'button1_measure_hold'? [-Wimplicit-function-declaration]
+  277 |    button4_measure_hold();
+      |    ^~~~~~~~~~~~~~~~~~~~
+      |    button1_measure_hold
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:299:3: warning: implicit declaration of function 'button2_start'; did you mean 'button1_start'? [-Wimplicit-function-declaration]
+  299 |   button2_start();
+      |   ^~~~~~~~~~~~~
+      |   button1_start
+../Core/Src/main.c:305:3: warning: implicit declaration of function 'button2_finish'; did you mean 'button1_finish'? [-Wimplicit-function-declaration]
+  305 |   button2_finish();
+      |   ^~~~~~~~~~~~~~
+      |   button1_finish
+../Core/Src/main.c:311:3: warning: implicit declaration of function 'button3_start'; did you mean 'button1_start'? [-Wimplicit-function-declaration]
+  311 |   button3_start();
+      |   ^~~~~~~~~~~~~
+      |   button1_start
+../Core/Src/main.c:317:3: warning: implicit declaration of function 'button3_finish'; did you mean 'button1_finish'? [-Wimplicit-function-declaration]
+  317 |   button3_finish();
+      |   ^~~~~~~~~~~~~~
+      |   button1_finish
+../Core/Src/main.c:323:3: warning: implicit declaration of function 'button4_start'; did you mean 'button1_start'? [-Wimplicit-function-declaration]
+  323 |   button4_start();
+      |   ^~~~~~~~~~~~~
+      |   button1_start
+../Core/Src/main.c:329:3: warning: implicit declaration of function 'button4_finish'; did you mean 'button1_finish'? [-Wimplicit-function-declaration]
+  329 |   button4_finish();
+      |   ^~~~~~~~~~~~~~
+      |   button1_finish
+arm-none-eabi-gcc -o "9. Alarm.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\9. Alarm\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="9. Alarm.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 9. Alarm.elf
+ 
+arm-none-eabi-size   9.\ Alarm.elf 
+arm-none-eabi-objdump -h -S  9.\ Alarm.elf  > "9. Alarm.list"
+   text	   data	    bss	    dec	    hex	filename
+  25276	    280	   1992	  27548	   6b9c	9. Alarm.elf
+Finished building: default.size.stdout
+ 
+Finished building: 9. Alarm.list
+ 
+
+15:23:07 Build Finished. 0 errors, 17 warnings. (took 938ms)
+

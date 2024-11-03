@@ -1,0 +1,75 @@
+14:58:08 **** Incremental Build of configuration Debug for project 7. Clock - Display date and time and add leap year ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:122:3: warning: implicit declaration of function 'init_clock' [-Wimplicit-function-declaration]
+  122 |   init_clock();
+      |   ^~~~~~~~~~
+../Core/Src/main.c:139:4: warning: enumeration value 'READY' not handled in switch [-Wswitch]
+  139 |    switch(lap.state)
+      |    ^~~~~~
+../Core/Src/main.c:149:4: warning: implicit declaration of function 'show_clock' [-Wimplicit-function-declaration]
+  149 |    show_clock();
+      |    ^~~~~~~~~~
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:221:3: warning: implicit declaration of function 'clock_convert_time_format'; did you mean 'stopwatch_convert_time_format'? [-Wimplicit-function-declaration]
+  221 |   clock_convert_time_format();
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |   stopwatch_convert_time_format
+../Core/Src/main.c:231:4: warning: implicit declaration of function 'beep_buzzer_check' [-Wimplicit-function-declaration]
+  231 |    beep_buzzer_check();
+      |    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:243:4: warning: implicit declaration of function 'button2_measure_hold'; did you mean 'button1_measure_hold'? [-Wimplicit-function-declaration]
+  243 |    button2_measure_hold();
+      |    ^~~~~~~~~~~~~~~~~~~~
+      |    button1_measure_hold
+../Core/Src/main.c:248:4: warning: implicit declaration of function 'button3_measure_hold'; did you mean 'button1_measure_hold'? [-Wimplicit-function-declaration]
+  248 |    button3_measure_hold();
+      |    ^~~~~~~~~~~~~~~~~~~~
+      |    button1_measure_hold
+../Core/Src/main.c:253:4: warning: implicit declaration of function 'button4_measure_hold'; did you mean 'button1_measure_hold'? [-Wimplicit-function-declaration]
+  253 |    button4_measure_hold();
+      |    ^~~~~~~~~~~~~~~~~~~~
+      |    button1_measure_hold
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:265:3: warning: implicit declaration of function 'beep_buzzer' [-Wimplicit-function-declaration]
+  265 |   beep_buzzer(30, LOW);
+      |   ^~~~~~~~~~~
+../Core/Src/main.c:278:3: warning: implicit declaration of function 'button2_start'; did you mean 'button1_start'? [-Wimplicit-function-declaration]
+  278 |   button2_start();
+      |   ^~~~~~~~~~~~~
+      |   button1_start
+../Core/Src/main.c:286:3: warning: implicit declaration of function 'button2_finish'; did you mean 'button1_finish'? [-Wimplicit-function-declaration]
+  286 |   button2_finish();
+      |   ^~~~~~~~~~~~~~
+      |   button1_finish
+../Core/Src/main.c:294:3: warning: implicit declaration of function 'button3_start'; did you mean 'button1_start'? [-Wimplicit-function-declaration]
+  294 |   button3_start();
+      |   ^~~~~~~~~~~~~
+      |   button1_start
+../Core/Src/main.c:302:3: warning: implicit declaration of function 'button3_finish'; did you mean 'button1_finish'? [-Wimplicit-function-declaration]
+  302 |   button3_finish();
+      |   ^~~~~~~~~~~~~~
+      |   button1_finish
+../Core/Src/main.c:309:3: warning: implicit declaration of function 'button4_start'; did you mean 'button1_start'? [-Wimplicit-function-declaration]
+  309 |   button4_start();
+      |   ^~~~~~~~~~~~~
+      |   button1_start
+../Core/Src/main.c:317:3: warning: implicit declaration of function 'button4_finish'; did you mean 'button1_finish'? [-Wimplicit-function-declaration]
+  317 |   button4_finish();
+      |   ^~~~~~~~~~~~~~
+      |   button1_finish
+arm-none-eabi-gcc -o "7. Clock - Display date and time and add leap year.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\7. Clock - Display date and time and add leap year\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="7. Clock - Display date and time and add leap year.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 7. Clock - Display date and time and add leap year.elf
+ 
+arm-none-eabi-size   7.\ Clock\ -\ Display\ date\ and\ time\ and\ add\ leap\ year.elf 
+arm-none-eabi-objdump -h -S  7.\ Clock\ -\ Display\ date\ and\ time\ and\ add\ leap\ year.elf  > "7. Clock - Display date and time and add leap year.list"
+   text	   data	    bss	    dec	    hex	filename
+  22684	    204	   1988	  24876	   612c	7. Clock - Display date and time and add leap year.elf
+Finished building: default.size.stdout
+ 
+Finished building: 7. Clock - Display date and time and add leap year.list
+ 
+
+14:58:09 Build Finished. 0 errors, 15 warnings. (took 784ms)
+

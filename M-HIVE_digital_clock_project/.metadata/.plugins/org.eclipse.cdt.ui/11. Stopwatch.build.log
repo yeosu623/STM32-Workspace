@@ -1,0 +1,78 @@
+15:36:07 **** Build of configuration Debug for project 11. Stopwatch ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:127:3: warning: implicit declaration of function 'init_clock' [-Wimplicit-function-declaration]
+  127 |   init_clock();
+      |   ^~~~~~~~~~
+../Core/Src/main.c:144:4: warning: enumeration value 'READY' not handled in switch [-Wswitch]
+  144 |    switch(lap.state)
+      |    ^~~~~~
+../Core/Src/main.c:155:4: warning: implicit declaration of function 'show_clock' [-Wimplicit-function-declaration]
+  155 |    show_clock();
+      |    ^~~~~~~~~~
+../Core/Src/main.c:160:4: warning: implicit declaration of function 'show_clock_config' [-Wimplicit-function-declaration]
+  160 |    show_clock_config();
+      |    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:170:4: warning: implicit declaration of function 'show_alarm_config' [-Wimplicit-function-declaration]
+  170 |    show_alarm_config();
+      |    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:248:3: warning: implicit declaration of function 'clock_convert_time_format'; did you mean 'stopwatch_convert_time_format'? [-Wimplicit-function-declaration]
+  248 |   clock_convert_time_format();
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |   stopwatch_convert_time_format
+../Core/Src/main.c:258:4: warning: implicit declaration of function 'beep_buzzer_check' [-Wimplicit-function-declaration]
+  258 |    beep_buzzer_check();
+      |    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:275:4: warning: implicit declaration of function 'button2_measure_hold'; did you mean 'button1_measure_hold'? [-Wimplicit-function-declaration]
+  275 |    button2_measure_hold();
+      |    ^~~~~~~~~~~~~~~~~~~~
+      |    button1_measure_hold
+../Core/Src/main.c:280:4: warning: implicit declaration of function 'button3_measure_hold'; did you mean 'button1_measure_hold'? [-Wimplicit-function-declaration]
+  280 |    button3_measure_hold();
+      |    ^~~~~~~~~~~~~~~~~~~~
+      |    button1_measure_hold
+../Core/Src/main.c:285:4: warning: implicit declaration of function 'button4_measure_hold'; did you mean 'button1_measure_hold'? [-Wimplicit-function-declaration]
+  285 |    button4_measure_hold();
+      |    ^~~~~~~~~~~~~~~~~~~~
+      |    button1_measure_hold
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:307:3: warning: implicit declaration of function 'button2_start'; did you mean 'button1_start'? [-Wimplicit-function-declaration]
+  307 |   button2_start();
+      |   ^~~~~~~~~~~~~
+      |   button1_start
+../Core/Src/main.c:313:3: warning: implicit declaration of function 'button2_finish'; did you mean 'button1_finish'? [-Wimplicit-function-declaration]
+  313 |   button2_finish();
+      |   ^~~~~~~~~~~~~~
+      |   button1_finish
+../Core/Src/main.c:319:3: warning: implicit declaration of function 'button3_start'; did you mean 'button1_start'? [-Wimplicit-function-declaration]
+  319 |   button3_start();
+      |   ^~~~~~~~~~~~~
+      |   button1_start
+../Core/Src/main.c:325:3: warning: implicit declaration of function 'button3_finish'; did you mean 'button1_finish'? [-Wimplicit-function-declaration]
+  325 |   button3_finish();
+      |   ^~~~~~~~~~~~~~
+      |   button1_finish
+../Core/Src/main.c:331:3: warning: implicit declaration of function 'button4_start'; did you mean 'button1_start'? [-Wimplicit-function-declaration]
+  331 |   button4_start();
+      |   ^~~~~~~~~~~~~
+      |   button1_start
+../Core/Src/main.c:337:3: warning: implicit declaration of function 'button4_finish'; did you mean 'button1_finish'? [-Wimplicit-function-declaration]
+  337 |   button4_finish();
+      |   ^~~~~~~~~~~~~~
+      |   button1_finish
+arm-none-eabi-gcc -o "11. Stopwatch.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\11. Stopwatch\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="11. Stopwatch.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 11. Stopwatch.elf
+ 
+arm-none-eabi-size   11.\ Stopwatch.elf 
+arm-none-eabi-objdump -h -S  11.\ Stopwatch.elf  > "11. Stopwatch.list"
+   text	   data	    bss	    dec	    hex	filename
+  27320	    460	   1836	  29616	   73b0	11. Stopwatch.elf
+Finished building: default.size.stdout
+ 
+Finished building: 11. Stopwatch.list
+ 
+
+15:36:08 Build Finished. 0 errors, 16 warnings. (took 975ms)
+

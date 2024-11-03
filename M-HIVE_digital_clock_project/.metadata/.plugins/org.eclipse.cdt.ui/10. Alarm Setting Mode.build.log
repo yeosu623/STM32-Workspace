@@ -1,0 +1,10 @@
+15:30:26 **** Build of configuration Debug for project 10. Alarm Setting Mode ****
+make -j8 all 
+arm-none-eabi-size   10.\ Alarm\ Setting\ Mode.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26920	    304	   1992	  29216	   7220	10. Alarm Setting Mode.elf
+Finished building: default.size.stdout
+ 
+
+15:30:26 Build Finished. 0 errors, 0 warnings. (took 241ms)
+

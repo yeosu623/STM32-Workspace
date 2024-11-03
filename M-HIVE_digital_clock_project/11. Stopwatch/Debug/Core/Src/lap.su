@@ -1,0 +1,4 @@
+../Core/Src/lap.c:9:6:init_lap	8	static
+../Core/Src/lap.c:19:6:save_lap	32	static
+../Core/Src/lap.c:57:6:display_lap	40	static
+../Core/Src/lap.c:90:6:clear_lap	8	static

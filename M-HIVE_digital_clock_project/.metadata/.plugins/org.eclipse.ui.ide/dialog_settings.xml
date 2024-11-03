@@ -7,6 +7,14 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\11. Stopwatch"/>
+			<item value="C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\10. Alarm Setting Mode"/>
+			<item value="C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\9-2. Alarm - Repeat"/>
+			<item value="C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\9. Alarm"/>
+			<item value="C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\8. Clock Configuration - Change date and time"/>
+			<item value="C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\7. Clock - Display date and time and add leap year"/>
+			<item value="C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\6. Variation of button event 3 - buzzer sound between changing hold state"/>
+			<item value="C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\7. Clock - Display date and time, and add leap year"/>
 			<item value="C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\5. Variation of button event 2 - short. mid. long hold"/>
 			<item value="C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\4. Variation of button event 1 - short. mid. long press"/>
 			<item value="C:\Users\yeosu\STM32CubeIDE\workspace_1.10.1\M-HIVE_digital_clock_project\4. Variation of button event 1 - short, mid, long press"/>

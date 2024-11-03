@@ -1,0 +1,11 @@
+../Core/Src/clock_config.c:17:6:init_clock_config	4	static
+../Core/Src/clock_config.c:23:6:show_clock_config	16	static
+../Core/Src/clock_config.c:46:6:blink_choose_element	4	static
+../Core/Src/clock_config.c:82:6:next_item	4	static
+../Core/Src/clock_config.c:95:6:increase_once	8	static
+../Core/Src/clock_config.c:135:6:decrease_once	8	static
+../Core/Src/clock_config.c:175:6:increase_continuous_150ms	8	static
+../Core/Src/clock_config.c:184:6:increase_continuous_20ms	8	static
+../Core/Src/clock_config.c:193:6:decrease_continuous_150ms	8	static
+../Core/Src/clock_config.c:202:6:decrease_continuous_20ms	8	static
+../Core/Src/clock_config.c:211:6:adjust_to_max_day	72	static

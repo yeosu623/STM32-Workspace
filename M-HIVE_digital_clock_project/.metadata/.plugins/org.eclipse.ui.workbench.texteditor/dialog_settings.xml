@@ -6,30 +6,38 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="measure_hold"/>
+		<item key="selection" value="init_stopwatch"/>
 		<list key="findhistory">
-			<item value="increase_by"/>
-			<item value="increase"/>
-			<item value="measure_hold"/>
-			<item value="NONE"/>
-			<item value="show"/>
-			<item value="CLCD_Puts"/>
-			<item value="0, 0"/>
-			<item value="MEASURE_RELEASE"/>
-			<item value="R_BLUE"/>
-			<item value="DGT"/>
-			<item value="clear_time"/>
-			<item value="show_time"/>
-			<item value="button"/>
-			<item value="700"/>
-			<item value="2500"/>
+			<item value="init_stopwatch"/>
+			<item value="system."/>
+			<item value="stopwatch"/>
+			<item value="init_alarm_config"/>
+			<item value="init_alarm"/>
+			<item value="system.wait_milisecond"/>
+			<item value="system.mode="/>
+			<item value="system.mode ="/>
+			<item value="system.mode"/>
+			<item value="system_mode"/>
+			<item value="system"/>
+			<item value="clock_config.wait_milisecond"/>
+			<item value="beep_buzzer_check"/>
+			<item value="show_clock"/>
+			<item value="button1"/>
 		</list>
 		<list key="replacehistory">
+			<item value="system.mode"/>
+			<item value="systems."/>
+			<item value="system.wait_milisecond"/>
+			<item value="button4"/>
+			<item value="button3"/>
+			<item value="button2"/>
+			<item value="(system_mode)"/>
+			<item value="mode"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1401"/>
-		<item key="DIALOG_Y_ORIGIN" value="445"/>
+		<item key="DIALOG_X_ORIGIN" value="39"/>
+		<item key="DIALOG_Y_ORIGIN" value="347"/>
 		<item key="DIALOG_WIDTH" value="418"/>
 		<item key="DIALOG_HEIGHT" value="523"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

@@ -1,0 +1,10 @@
+../Core/Src/alarm_config.c:21:6:init_alarm_config	4	static
+../Core/Src/alarm_config.c:28:6:show_alarm_config	16	static
+../Core/Src/alarm_config.c:54:6:blink_choose_alarm_config_element	4	static
+../Core/Src/alarm_config.c:85:6:alarm_config_next_item	4	static
+../Core/Src/alarm_config.c:97:6:alarm_config_increase_once	4	static
+../Core/Src/alarm_config.c:126:6:alarm_config_decrease_once	4	static
+../Core/Src/alarm_config.c:155:6:alarm_config_increase_continuous_150ms	8	static
+../Core/Src/alarm_config.c:164:6:alarm_config_increase_continuous_20ms	8	static
+../Core/Src/alarm_config.c:173:6:alarm_config_decrease_continuous_150ms	8	static
+../Core/Src/alarm_config.c:182:6:alarm_config_decrease_continuous_20ms	8	static

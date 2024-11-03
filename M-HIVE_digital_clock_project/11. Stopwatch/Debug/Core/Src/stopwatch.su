@@ -1,0 +1,4 @@
+../Core/Src/stopwatch.c:11:6:init_stopwatch	4	static
+../Core/Src/stopwatch.c:16:6:show_stopwatch	32	static
+../Core/Src/stopwatch.c:42:6:clear_stopwatch	4	static
+../Core/Src/stopwatch.c:50:6:stopwatch_convert_time_format	4	static

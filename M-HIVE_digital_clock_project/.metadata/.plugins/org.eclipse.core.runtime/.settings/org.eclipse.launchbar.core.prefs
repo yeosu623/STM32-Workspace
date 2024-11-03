@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:5. Variation of button event 2 - short. mid. long hold Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:11. Stopwatch Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-1.\ LED\ toggle\ with\ button\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-1.\ LED\ toggle\ with\ button\ Debug/activeLaunchTarget=null\:---
@@ -9,6 +9,10 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-2.\ LED\ toggle\ with\ button
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-2.\ LED\ toggle\ with\ button\ and\ UART\ transmission\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-3.\ Count\ button\ pushing\ time\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-3.\ Count\ button\ pushing\ time\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:10.\ Alarm\ Setting\ Mode\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:10.\ Alarm\ Setting\ Mode\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:11.\ Stopwatch\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:11.\ Stopwatch\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:2.\ Stopwatch\ -\ 7-Seg\ display\ and\ button\ input\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:2.\ Stopwatch\ -\ 7-Seg\ display\ and\ button\ input\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:3.\ Stopwatch\ -\ CLCD\ display\ and\ lap\ timer\ Debug/activeLaunchMode=run
@@ -19,3 +23,15 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:5.\ Variation\ of\ button\ even
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:5.\ Variation\ of\ button\ event\ 2\ -\ short.\ mid.\ long\ hold\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:5.\ Variation\ of\ button\ event\ 2\ -\ short.\ mid.\ long\ press/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:5.\ Variation\ of\ button\ event\ 2\ -\ short.\ mid.\ long\ press/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:6.\ Variation\ of\ button\ event\ 3\ -\ buzzer\ sound\ between\ changing\ hold\ state/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:6.\ Variation\ of\ button\ event\ 3\ -\ buzzer\ sound\ between\ changing\ hold\ state/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:7.\ Clock\ -\ Display\ date\ and\ time\ and\ add\ leap\ year\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:7.\ Clock\ -\ Display\ date\ and\ time\ and\ add\ leap\ year\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:8.\ Clock\ Configuration\ -\ Change\ date\ and\ time\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:8.\ Clock\ Configuration\ -\ Change\ date\ and\ time\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:9-2.\ Alarm\ -\ Repeat\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:9-2.\ Alarm\ -\ Repeat\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:9.\ Alarm\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:9.\ Alarm\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:9.\ Alarm/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:9.\ Alarm/activeLaunchTarget=null\:---

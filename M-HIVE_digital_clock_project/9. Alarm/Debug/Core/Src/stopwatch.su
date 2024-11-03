@@ -1,0 +1,6 @@
+../Core/Src/stopwatch.c:10:6:stopwatch_show_time	32	static
+../Core/Src/stopwatch.c:30:6:stopwatch_clear_time	4	static
+../Core/Src/stopwatch.c:38:6:stopwatch_run_and_pause	4	static
+../Core/Src/stopwatch.c:44:6:stopwatch_measure_lap_or_stop	8	static
+../Core/Src/stopwatch.c:56:6:stopwatch_dlsplay_record	4	static
+../Core/Src/stopwatch.c:61:6:stopwatch_convert_time_format	4	static

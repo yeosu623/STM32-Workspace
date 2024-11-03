@@ -1,0 +1,10 @@
+14:44:14 **** Build of configuration Debug for project 6. Variation of button event 3 - buzzer sound between changing hold state ****
+make -j8 all 
+arm-none-eabi-size   6.\ Variation\ of\ button\ event\ 3\ -\ buzzer\ sound\ between\ changing\ hold\ state.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20784	    148	   1948	  22880	   5960	6. Variation of button event 3 - buzzer sound between changing hold state.elf
+Finished building: default.size.stdout
+ 
+
+14:44:15 Build Finished. 0 errors, 0 warnings. (took 860ms)
+

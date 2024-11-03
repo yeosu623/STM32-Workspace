@@ -1,0 +1,12 @@
+../Core/Src/button4_event.c:14:6:button4_start	8	static
+../Core/Src/button4_event.c:28:6:button4_measure_hold	8	static
+../Core/Src/button4_event.c:64:6:button4_short_hold	4	static
+../Core/Src/button4_event.c:69:6:button4_short_mid_threshold	8	static
+../Core/Src/button4_event.c:74:6:button4_mid_hold	8	static
+../Core/Src/button4_event.c:84:6:button4_mid_long_threshold	8	static
+../Core/Src/button4_event.c:89:6:button4_long_hold	8	static
+../Core/Src/button4_event.c:100:6:button4_finish	8	static
+../Core/Src/button4_event.c:105:6:button4_measure_release	8	static
+../Core/Src/button4_event.c:121:6:button4_short_release	4	static
+../Core/Src/button4_event.c:126:6:button4_mid_release	4	static
+../Core/Src/button4_event.c:131:6:button4_long_release	4	static
